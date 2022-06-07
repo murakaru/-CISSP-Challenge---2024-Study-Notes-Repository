@@ -16,7 +16,10 @@ So, this certification is not for everyone. Its recommended to haave atleast 5 y
 ## Resources used 
 
 - CISSP official Study guide 
-- CISSP all in one Exam guide
-- 11th Hour CISSP
+- CISSP all in one Exam guide, 8th Edition
+- 11th Hour CISSP, 3rd edition
+- CISSP Practice Exams, 5th Edition
+- CISSP in 21 days
+- acloudguru CISSP video tutorial
 
 See you in the next one....
