@@ -11,7 +11,7 @@
 
 CISSP :  **Certified Information Systems Security Professional**
 
-So, this certification is not for everyone. Its recommended to haave atleast 5 years industry experience before taking this exam. After successfully completing the course work and the exam, you will be identified as security professional with theoretical and practical knowledge about industry security practises.  
+So, this certification is not for everyone. Its recommended to have atleast 5 years industry experience before taking this exam. After successfully completing the course work and the exam, you will be identified as security professional with theoretical and practical knowledge about industry security practises.  
 
 ## Resources used 
 
