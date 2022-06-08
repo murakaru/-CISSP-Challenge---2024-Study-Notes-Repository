@@ -33,11 +33,29 @@ So, this certification is not for everyone. Its recommended to have atleast 5 ye
 - Intellectual property 
 - Privacy 
 - Policies, Standards, Baselines, Guidelines, and Procedures
+- Risk Management
+- Threat Modeling
+- Security Governance
+- Ethics
+
+## CIA TRIAD
+
+**Objective** 
+
+- What is the CIA triad? 
+- Explain AAA security framework. 
+- Understand other security definitions e.g authenticity, accountability, non-repudiation and assurance. 
 
 
-Fundamental Security concepts: [CIA triad](https://murakaru.com/career-blog-1/f/building-secure-systems)
+For information about the CIA triad, [click here](https://murakaru.com/career-blog-1/f/building-secure-systems)
+Opposite of CIA triad is DAD which stands for Disclosure,Alteration and Destruction. 
+Other key terms described in the cyber security must know [blog](https://murakaru.com/career-blog-1/f/building-secure-systems?blogcategory=Cybersecurity+Posts+) include: Authenticity, Accountability, Non-repudiation and assurance
+<img width="435" alt="image" align="center" src="https://user-images.githubusercontent.com/19290577/172677537-c955bf3b-eaa9-4dda-973a-9971bf37c173.png">
+
+
+## SECURITY CONCEPTS
+
 - Differences between vulnerability, threat, risk, exposure and control - These terms are easily glosssed over however, its imperative for security teams to undestand the differences inorder to avoid confusion. 
-
 - Here is a pretty neat diagram I created that shows the differences and relationship between security concepts. 
 
 
