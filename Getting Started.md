@@ -1,8 +1,6 @@
-# Day 1 - Getting Started with CISSP
+# Getting Started with CISSP
 
 ## Introduction
-
-## Topic Covered
   - What is CISSP certification
   - Who should take this exam? 
   - Benefits of CISSP in the Industry
