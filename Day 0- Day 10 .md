@@ -27,6 +27,13 @@ So, this certification is not for everyone. Its recommended to have atleast 5 ye
 - Security Concepts 
 - Defence In depth 
 - Security Controls 
+- Security Frameworks 
+- Security Program Development
+- Cybercrime
+- Intellectual property 
+- Privacy 
+- Policies, Standards, Baselines, Guidelines, and Procedures
+
 
 Fundamental Security concepts: [CIA triad](https://murakaru.com/career-blog-1/f/building-secure-systems)
 - Differences between vulnerability, threat, risk, exposure and control - These terms are easily glosssed over however, its imperative for security teams to undestand the differences inorder to avoid confusion. 
