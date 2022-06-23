@@ -11,14 +11,12 @@
 
 ## Security Concepts 
 
-- CIA triad. 
-- Explain AAA security framework. 
-- Understand other security definitions e.g authenticity, accountability, non-repudiation and assurance. 
+This section aims to explain the *CIA* triad, *AAA* security framework and other security definitions e.g authenticity, accountability, non-repudiation and assurance. 
 
 
 For information about the CIA triad, [click here](https://murakaru.com/career-blog-1/f/building-secure-systems)
-- Opposite of CIA triad is DAD which stands for Disclosure,Alteration and Destruction. 
-- Other key terms described in the cyber security must know [blog](https://murakaru.com/career-blog-1/f/building-secure-systems?blogcategory=Cybersecurity+Posts+) include: Authenticity, Accountability, Non-repudiation and assurance
+- Opposite of CIA triad is **DAD** which stands for Disclosure,Alteration and Destruction. 
+- Other key security definitions are described in the cyber security must know [blog](https://murakaru.com/career-blog-1/f/building-secure-systems?blogcategory=Cybersecurity+Posts+) include: Authenticity, Accountability, Non-repudiation and assurance
 
 ![image](https://user-images.githubusercontent.com/19290577/175121791-d1a4985a-c18b-4228-b586-dfd2f60f9c99.png)
 
@@ -28,25 +26,14 @@ For information about the CIA triad, [click here](https://murakaru.com/career-bl
 
 ## Security Governance Principles
 
+This section explains how organizations should align their security function to business strategy, goals, mission, and objectives. 
+We will also look into the organizational roles and responsibilities from a security perspective, the common Security control frameworks that organizations can align with as they design their security strategy. 
 
+**Types of Security Controls**
 
-Alignment of the security function to business strategy, goals, mission, and objectives
-» Organizational processes (e.g., acquisitions, divestitures, governance committees)
-» Organizational roles and responsibilities
-» Security control frameworks
-» Due care/due diligence
-
-**Objectives**
-- What are security controls 
-- Explain the types of security controls 
-- Explain the functionalities of the security controls 
-
-These are put in place to reduce risks an organization might face.
-
-**Types of Controls**
-- Administrative: security documentation, risk management, personnel security, and training
-- Technical: software or hardware components, as in firewalls, IDS, encryption, and identification and authentication mechanisms.
-- Physical: security guards, locks, fencing, and lighting.
+- **Administrative**: Security documentation, risk management, personnel security, and training
+- **Technical**: software or hardware components e.g firewalls, IDS, encryption, and identification and authentication mechanisms.
+- **Physical**: security guards, locks, fencing, and lighting.
 
 Controls provide **Defence in Depth** which is a layered security approach. If one line of defense is compromised, additional layers exist as a backup to ensure that threats are stopped along the way. 
 
@@ -151,8 +138,6 @@ Nb/ Note the difference between 27001 and 27002 for the CISSP exam
 - Capability Maturity Model (CMMI): Software developers maturity rating 
 - Six Sigma: Developed for identifying manufacturing defects but can be used to measure the success factors of security framework.
 
-
-
 **Due Diligence vs Due Care**
 
 So how due you disapprove **negligence** in the occurrence of a loss?  Due Diligence and Due Care. What's the difference between the two? 
@@ -178,8 +163,8 @@ So how due you disapprove **negligence** in the occurrence of a loss?  Due Dilig
 
 Objective 
 
-What is threat modelling?
-How do we identify threats? 
+- What is threat modelling?
+- How do we identify threats? 
 
 Threat modelling can be performed proacively or reactively. In both cases, a threat is identified,categorised and analysed. 
 
@@ -190,7 +175,6 @@ Below is an ilustration showing the basic steps of threat modelling.
 **Identifying Threats**
 
 Which guidance or references should be used to identify and categorise threats. 
-
 
 **STRIDE**: Developed by Microsoft
 
@@ -204,7 +188,6 @@ PASTA threat modelling combines an attacker perspective of a business with risk 
 
 
 ![image](https://user-images.githubusercontent.com/19290577/175121445-309430fe-64f1-4e9a-a1a0-aa77c00a7b5d.png)
-
 
 
 **VAST**
