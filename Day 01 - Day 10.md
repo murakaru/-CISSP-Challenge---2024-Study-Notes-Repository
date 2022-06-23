@@ -27,13 +27,13 @@ For information about the CIA triad, [click here](https://murakaru.com/career-bl
 ## Security Governance Principles
 
 This section explains how organizations should align their security function to business strategy, goals, mission, and objectives. 
-We will also look into the organizational roles and responsibilities from a security perspective, the common Security control frameworks that organizations can align with as they design their security strategy. 
+We will also look into the organizational roles and responsibilities from a security perspective and the common Security control frameworks that organizations can align with as they design their security strategy. 
 
 **Types of Security Controls**
 
 - **Administrative**: Security documentation, risk management, personnel security, and training
-- **Technical**: software or hardware components e.g firewalls, IDS, encryption, and identification and authentication mechanisms.
-- **Physical**: security guards, locks, fencing, and lighting.
+- **Technical**: Software or hardware components e.g firewalls, IDS, encryption, and identification and authentication mechanisms.
+- **Physical**: Security guards, locks, fencing, and lighting.
 
 Controls provide **Defence in Depth** which is a layered security approach. If one line of defense is compromised, additional layers exist as a backup to ensure that threats are stopped along the way. 
 
@@ -48,27 +48,20 @@ Controls provide **Defence in Depth** which is a layered security approach. If o
 
 ## Security Control Frameworks 
 
-**Objectives**
-
-- What is a security Control framework?
-- Why do organizations need Security control frameworks?
-- Which Frameworks exist in the industry.
-
-
 Security control Frameworks form the foundation for security programs. By adopting Security control frameworks,you can apply proven security practises to your organizations. Frameworks are generic and can be used across multiple industries. 
 
 **Common Security Control Frameworks**
 
 1. **ISO/IEC 27000 series** - This is a joint standard for Information Security Management (ISM) 
-- **ISO 27001**
-Information Security Management Requirements for **governance**
-Examines the risks of an organization e.g threats, vulnerabilities. 
-Uses the above information to develop policies
-Designs and impelements suite of information security controls (defined in 27002) to address and manage the risks. 
-Ensures that security practises are followed to ensure that the security controls meet the organizations security needs on an ongoing basis
-Plan -> Do -> Check ->Act.  
-Measure twice and cut one. 
-Example: GDPR
+
+- **ISO 27001** -Information Security Management Requirements for **governance**
+  - Examines the risks of an organization e.g threats, vulnerabilities. 
+  - Uses the above information to develop policies. 
+  - Designs and implements suite of information security controls (defined in 27002) to address and manage the risks. 
+  - Ensures that security practises are followed to ensure that the security controls meet the organizations security needs on an ongoing basis
+  - Plan -> Do -> Check ->Act.  
+  - Measure twice and cut one. 
+  - Example: GDPR
 
 - **ISO 27002** - Information **Security Controls defined** to achieve your mission as an organization. The goal is to implement policies, assign responsibilities and prescribe proceedures for applying integrated, layered protection for Information Systems. 
 There are 12 security controls defined 
@@ -160,15 +153,10 @@ So how due you disapprove **negligence** in the occurrence of a loss?  Due Dilig
 
 
 ## Threat Modelling 
-
-Objective 
-
-- What is threat modelling?
-- How do we identify threats? 
-
+ 
 Threat modelling can be performed proacively or reactively. In both cases, a threat is identified,categorised and analysed. 
 
-Below is an ilustration showing the basic steps of threat modelling. 
+Below is an illustration showing the basic steps of threat modelling. 
 
 ![image](https://user-images.githubusercontent.com/19290577/175121193-762b2058-2b55-4fda-8c4b-9b8b2c995d4a.png)
 
