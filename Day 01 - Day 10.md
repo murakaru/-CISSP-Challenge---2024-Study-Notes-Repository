@@ -139,7 +139,7 @@ So how due you disapprove **negligence** in the occurrence of a loss?  Due Dilig
 
 **Definition of terms**
 
-- **Standards**: compulsory requirements for the homogenous use of hardware, software, technology, and security controls. 
+- **Standards**: Compulsory requirements for the homogenous use of hardware, software, technology, and security controls. 
 
 - **Baselines**: The minimum level of security that every system throughout the organization must meet
 
