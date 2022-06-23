@@ -9,11 +9,9 @@
 - Security Governance
 - Ethics
 
-## CIA Triad
+## Security Concepts 
 
-**Objective** 
-
-- What is the CIA triad? 
+- CIA triad. 
 - Explain AAA security framework. 
 - Understand other security definitions e.g authenticity, accountability, non-repudiation and assurance. 
 
@@ -24,13 +22,19 @@ For information about the CIA triad, [click here](https://murakaru.com/career-bl
 
 ![image](https://user-images.githubusercontent.com/19290577/175121791-d1a4985a-c18b-4228-b586-dfd2f60f9c99.png)
 
-## Security Concepts
-
 - Differences between vulnerability, threat, risk, exposure and control - These terms are easily glosssed over however, its imperative for security teams to undestand the differences inorder to avoid confusion. 
 - Here is a pretty neat diagram I created that shows the differences and relationship between security concepts. 
 ![image](https://user-images.githubusercontent.com/19290577/175120600-c39d9af6-a1cc-4b6f-8765-70a31d014dce.png)
 
-## Security Controls 
+## Security Governance Principles
+
+
+
+Alignment of the security function to business strategy, goals, mission, and objectives
+» Organizational processes (e.g., acquisitions, divestitures, governance committees)
+» Organizational roles and responsibilities
+» Security control frameworks
+» Due care/due diligence
 
 **Objectives**
 - What are security controls 
