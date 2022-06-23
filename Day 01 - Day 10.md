@@ -174,8 +174,7 @@ Which guidance or references should be used to identify and categorise threats.
 PASTA is the Process for Attack Simulation and Threat Analysis. 
 PASTA threat modelling combines an attacker perspective of a business with risk and impact analysis to create a complete picture of the threats to products and applications, their vulnerability to attack, and informing decisions about risk and priorities for fixes.
 
-
-![image](https://user-images.githubusercontent.com/19290577/175121445-309430fe-64f1-4e9a-a1a0-aa77c00a7b5d.png)
+![image](https://user-images.githubusercontent.com/19290577/175335262-ce7ccf80-0221-4a88-b587-7f780e6be973.png)
 
 
 **VAST**
