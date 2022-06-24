@@ -3,6 +3,8 @@
 - Follow along with me to learn CISSP in details.
 - I will update daily progress here share contents, audio and notes.
 
+All diagrams and illustrations created by me on Diagrams.net 
+
 
 # CISSP 2022 - Study Plan - 100 Days
 ----------------------------------
