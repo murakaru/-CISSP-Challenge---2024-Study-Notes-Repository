@@ -18,11 +18,10 @@ For information about the CIA triad, [click here](https://murakaru.com/career-bl
 - Opposite of CIA triad is **DAD** which stands for Disclosure,Alteration and Destruction. 
 - Other key security definitions are described in the cyber security must know [blog](https://murakaru.com/career-blog-1/f/building-secure-systems?blogcategory=Cybersecurity+Posts+) include: Authenticity, Accountability, Non-repudiation and assurance
 
-![image](https://user-images.githubusercontent.com/19290577/175121791-d1a4985a-c18b-4228-b586-dfd2f60f9c99.png)
 
 - Differences between vulnerability, threat, risk, exposure and control - These terms are easily glosssed over however, its imperative for security teams to undestand the differences inorder to avoid confusion. 
 - Here is a pretty neat diagram I created that shows the differences and relationship between security concepts. 
-![image](https://user-images.githubusercontent.com/19290577/175120600-c39d9af6-a1cc-4b6f-8765-70a31d014dce.png)
+
 
 ## Security Governance Principles
 
@@ -117,7 +116,7 @@ Nb/ Note the difference between 27001 and 27002 for the CISSP exam
 
   This creates a flexible standard that sets expections for problem solving and cjhange management teams. It ensures that the organization is safe from security risks 
   
-![image](https://user-images.githubusercontent.com/19290577/175120823-3a16454e-5668-442a-8837-c6dd288a0250.png)
+
 
 **NIST Frameworks**
 
@@ -135,7 +134,6 @@ Nb/ Note the difference between 27001 and 27002 for the CISSP exam
 
 So how due you disapprove **negligence** in the occurrence of a loss?  Due Diligence and Due Care. What's the difference between the two? 
 
-![image](https://user-images.githubusercontent.com/19290577/175120992-f1e738ec-5b7f-4fec-95bf-26e2b3ad8bb0.png)
 
 **Definition of terms**
 
@@ -158,7 +156,7 @@ Threat modelling can be performed proacively or reactively. In both cases, a thr
 
 Below is an illustration showing the basic steps of threat modelling. 
 
-![image](https://user-images.githubusercontent.com/19290577/175121193-762b2058-2b55-4fda-8c4b-9b8b2c995d4a.png)
+
 
 **Identifying Threats**
 
@@ -166,7 +164,7 @@ Which guidance or references should be used to identify and categorise threats.
 
 **STRIDE**: Developed by Microsoft
 
-![image](https://user-images.githubusercontent.com/19290577/175121381-31ed78ec-5ed8-42d2-a061-af8d5b2c02a4.png)
+
 
 
 **PASTA** 
@@ -174,7 +172,7 @@ Which guidance or references should be used to identify and categorise threats.
 PASTA is the Process for Attack Simulation and Threat Analysis. 
 PASTA threat modelling combines an attacker perspective of a business with risk and impact analysis to create a complete picture of the threats to products and applications, their vulnerability to attack, and informing decisions about risk and priorities for fixes.
 
-![image](https://user-images.githubusercontent.com/19290577/175335262-ce7ccf80-0221-4a88-b587-7f780e6be973.png)
+
 
 
 **VAST**
