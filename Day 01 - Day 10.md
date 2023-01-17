@@ -1,7 +1,6 @@
 
 ## Domain 1: Security and Risk Management  
 
-- CIA triad
 - Security Concepts 
 - Security Controls and Security Control Frameworks 
 - Threat Modeling
@@ -13,10 +12,62 @@
 
 This section aims to explain the *CIA* triad, *AAA* security framework and other security definitions e.g authenticity, accountability, non-repudiation and assurance. 
 
+- CIA trid
+- DAD 
+- IAAA
 
-CIA triad 
+
+## CIA triad 
 
 ![image](https://user-images.githubusercontent.com/19290577/213007046-ed4c256b-afd5-4717-9a35-710e7f4ae840.png)
+
+
+--Too much confidentiality = difficulty to access data = reduced availability 
+--Too much Integrity = slow down access = Cause delay in data usage = affects availability.
+--Too much availablity = Confidentiality and integrity will suffer 
+
+A balance of the three is required. 
+
+Threats to confidentiality 
+- Cryptanalysis - Attack on encryption 
+- Social Engineering 
+- Key loggers 
+- IOT 
+
+Countermeasures 
+
+- For data at rest - encyption using AES256 full disk encyption
+- For data in motion - Use Secure transport protocols e.g SSL, TLS or IPSEC
+- For data in Use: Adopt best practises -m clean desk, no shoulder surfing r.t.c 
+- Strong passwords, MFA , masking , access control , need to know, least priviledge.
+
+Threats to integrity 
+
+- Alteration of data
+- Code injection
+- Cryptanalysis 
+
+Countermeasures 
+
+- Cryptography 
+- Checksums 
+- Message Digest 
+- Digital signatures 
+- Access control 
+
+Threats to Availability 
+
+- Malicious Attacks e.g DDoS, physical system compromise, disgruntled employees revenge 
+- Application errors - code error in app 
+- Component failure e.g failed hardware
+
+Countermeasures 
+
+- IPS/IDS 
+- Patch management - Prior verification of patch before installation to rule out vulnerability possibility 
+- Redundancy - Active/standby configuration . RAID(having data on multiople disks) 
+- SLA - if using third party services e.f vendors, contractors and consultants. 
+
 
 - Opposite of CIA triad is **DAD** which stands for Disclosure,Alteration and Destruction. 
 DAD triad
@@ -27,8 +78,38 @@ DAD triad
 - Other key security definitions are described in the cyber security must know include: Authenticity, Accountability, Non-repudiation and assurance
 
 
-- Differences between vulnerability, threat, risk, exposure and control - These terms are easily glosssed over however, its imperative for security teams to undestand the differences inorder to avoid confusion. 
-- Here is a pretty neat diagram I created that shows the differences and relationship between security concepts. 
+
+ ### IAAA 
+ 
+ 
+ - Identification: Username, IP address, Phone number e.t.c 
+ - Authentication: Prove the identification e.g psomething you know (password), something you have (ID card, passport), something you are (biometrics)
+ - Authorization: What are you alloowed to access? What are the proviledges of the account? Role based access (RBAC)
+ - Auditing: Tracing an action to an identity through log collection
+ - Accounting: Proof that a specific user performed an action in the system
+
+
+## Risk terminologies to understand 
+- Asset
+- Asset valuation
+- vulnerability
+- Threat Vector
+- Threat 
+- Exposure
+- Risk 
+- Safeguards
+- Attack
+- Breach
+
+
+## Risk Calculation formula 
+ -- Risk = threat * Vulnerability
+ 
+               or 
+               
+ -- Risk = probability of harm * severity of harm
+
+
 
 
 ## Security Governance Principles
