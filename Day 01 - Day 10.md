@@ -14,9 +14,15 @@
 This section aims to explain the *CIA* triad, *AAA* security framework and other security definitions e.g authenticity, accountability, non-repudiation and assurance. 
 
 
-For information about the CIA triad, [click here](https://murakaru.com/career-blog-1/f/building-secure-systems)
+CIA triad 
+
+![image](https://user-images.githubusercontent.com/19290577/213007046-ed4c256b-afd5-4717-9a35-710e7f4ae840.png)
+
 - Opposite of CIA triad is **DAD** which stands for Disclosure,Alteration and Destruction. 
-- Other key security definitions are described in the cyber security must know [blog](https://murakaru.com/career-blog-1/f/building-secure-systems?blogcategory=Cybersecurity+Posts+) include: Authenticity, Accountability, Non-repudiation and assurance
+DAD triad
+
+
+- Other key security definitions are described in the cyber security must know include: Authenticity, Accountability, Non-repudiation and assurance
 
 
 - Differences between vulnerability, threat, risk, exposure and control - These terms are easily glosssed over however, its imperative for security teams to undestand the differences inorder to avoid confusion. 
