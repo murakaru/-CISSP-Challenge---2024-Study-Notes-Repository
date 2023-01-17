@@ -1,12 +1,15 @@
 
 ## Domain 1: Security and Risk Management  
 
-- Security Concepts 
-- Security Controls and Security Control Frameworks 
-- Threat Modeling
-- Security Program Development
-- Security Governance
-- Ethics
+With reference to the official guide, Domain 1 contains the below chapter and contents 
+
+
+- Chapter 1 : Security concepts | Security Governance principles | Threat Modelling | SCRM 
+- Chapter 2: Personnel Sec Policies | Risk Management concepts | Security awareness and training 
+- Chapter 3: BCP 
+- Chapter 4: Compliance | Legal and regulatory issues 
+- Chapter 19: Code of ethics | Investigation Types 
+
 
 ## Security Concepts 
 
