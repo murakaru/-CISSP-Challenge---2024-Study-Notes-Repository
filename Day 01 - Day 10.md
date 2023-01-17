@@ -21,6 +21,8 @@ CIA triad
 - Opposite of CIA triad is **DAD** which stands for Disclosure,Alteration and Destruction. 
 DAD triad
 
+![image](https://user-images.githubusercontent.com/19290577/213008411-eb48d484-d9bc-4ea0-9b2b-0b8ac97b8cce.png)
+
 
 - Other key security definitions are described in the cyber security must know include: Authenticity, Accountability, Non-repudiation and assurance
 
