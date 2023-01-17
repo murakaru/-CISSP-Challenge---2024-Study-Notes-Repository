@@ -254,7 +254,9 @@ Which guidance or references should be used to identify and categorise threats.
 
 **STRIDE**: Developed by Microsoft
 
+Here is a breakdown of the Stride model - definitions + Security controls 
 
+![image](https://user-images.githubusercontent.com/19290577/213023333-3536984e-e9ea-4fba-8d9b-1a53bbc66037.png)
 
 
 **PASTA** 
