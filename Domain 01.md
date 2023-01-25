@@ -331,6 +331,10 @@ Hand written notes of chapter 19
 
 ![image](https://user-images.githubusercontent.com/19290577/214577001-6cf67fbc-ad2d-45ee-b793-475d3bf7e39c.png)
 
+![image](https://user-images.githubusercontent.com/19290577/214587948-65eade03-f073-4054-8003-beb40ff673ac.png)
+
+![image](https://user-images.githubusercontent.com/19290577/214587807-9ce67e01-e97d-4e06-b92f-7c06b6d6cd00.png)
+
 
 **Code of ethics**
 
