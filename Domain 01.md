@@ -11,7 +11,7 @@ With reference to the official guide, Domain 1 contains the below chapter and co
 - Chapter 19: Code of ethics | Investigation Types 
 
 
-## Security Concepts 
+## Chapter 1 : Security concepts | Security Governance principles | Threat Modelling | SCRM 
 
 This section aims to explain the *CIA* triad, *AAA* security framework and other security definitions e.g authenticity, accountability, non-repudiation and assurance. 
 
