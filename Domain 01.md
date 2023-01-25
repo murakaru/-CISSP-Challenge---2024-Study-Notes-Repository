@@ -28,9 +28,9 @@ This section aims to explain the *Security concepts* below
 ![image](https://user-images.githubusercontent.com/19290577/213007046-ed4c256b-afd5-4717-9a35-710e7f4ae840.png)
 
 
---Too much confidentiality = difficulty to access data = reduced availability 
---Too much Integrity = slow down access = Cause delay in data usage = affects availability.
---Too much availablity = Confidentiality and integrity will suffer 
+- Too much confidentiality = difficulty to access data = reduced availability 
+- Too much Integrity = slow down access = Cause delay in data usage = affects availability.
+- Too much availablity = Confidentiality and integrity will suffer 
 
 A balance of the three is required. 
 
