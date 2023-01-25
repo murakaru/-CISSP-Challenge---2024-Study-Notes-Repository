@@ -11,16 +11,19 @@ With reference to the official guide, Domain 1 contains the below chapter and co
 - Chapter 19: Code of ethics | Investigation Types 
 
 
-## Chapter 1 : Security concepts | Security Governance principles | Threat Modelling | SCRM 
+## Chapter 1 
+### Security concepts 
 
-This section aims to explain the *CIA* triad, *AAA* security framework and other security definitions e.g authenticity, accountability, non-repudiation and assurance. 
-
+This section aims to explain the *Security concepts* below
 - CIA trid
 - DAD 
 - IAAA
 
+**CIA Triad**
+- *Confidentiality*: The goal of confidentiality protection is to prevent or minimize unauthorized access to data. Confidentiality protections prevent disclosure while protecting authorized access.
+- *Integrtity*: concept of protecting the reliability and correctness of data. Integrity protection prevents unauthorized alterations of data. Properly implemented integrity protection provides a means for authorized changes while protecting against intended and malicious unauthorized activities (such as viruses and intrusions) as well as mistakes made by authorized users (such as accidents or oversights).
+- *Availablity*: Availability means authorized subjects are granted timely and uninterrupted access to objects.
 
-### CIA triad 
 
 ![image](https://user-images.githubusercontent.com/19290577/213007046-ed4c256b-afd5-4717-9a35-710e7f4ae840.png)
 
@@ -74,7 +77,7 @@ Countermeasures
 
 Opposite of CIA triad is **DAD** which stands for Disclosure,Alteration and Destruction. 
 
- ## DAD triad
+**DAD triad**
 
 ![image](https://user-images.githubusercontent.com/19290577/213008411-eb48d484-d9bc-4ea0-9b2b-0b8ac97b8cce.png)
 
@@ -82,8 +85,7 @@ Opposite of CIA triad is **DAD** which stands for Disclosure,Alteration and Dest
 - Other key security definitions are described in the cyber security must know include: Authenticity, Accountability, Non-repudiation and assurance
 
 
-
- ### IAAA 
+ **IAAA** 
  
  
  - Identification: Username, IP address, Phone number e.t.c 
@@ -92,31 +94,7 @@ Opposite of CIA triad is **DAD** which stands for Disclosure,Alteration and Dest
  - Auditing: Tracing an action to an identity through log collection
  - Accounting: Proof that a specific user performed an action in the system
 
-
-## Risk terminologies to understand 
-- Asset
-- Asset valuation
-- vulnerability
-- Threat Vector
-- Threat 
-- Exposure
-- Risk 
-- Safeguards
-- Attack
-- Breach
-
-
-## Risk Calculation formula 
- -- Risk = threat * Vulnerability
- 
-               or 
-               
- -- Risk = probability of harm * severity of harm
-
-
-
-
-## Security Governance Principles
+### Security Governance principles
 
 This section explains how organizations should align their security function to business strategy, goals, mission, and objectives. 
 We will also look into the organizational roles and responsibilities from a security perspective and the common Security control frameworks that organizations can align with as they design their security strategy. 
@@ -138,7 +116,7 @@ Controls provide **Defence in Depth** which is a layered security approach. If o
 - **Compensating** Controls that provide an alternative measure of control
 
 
-## Security Control Frameworks 
+**Security Control Frameworks**
 
 Security control Frameworks form the foundation for security programs. By adopting Security control frameworks,you can apply proven security practises to your organizations. Frameworks are generic and can be used across multiple industries. 
 
@@ -243,12 +221,11 @@ So how due you disapprove **negligence** in the occurrence of a loss?  Due Dilig
 - **Security policy**: A document that defines the scope of security needed by the organization. It discusses the assets that require protection and the extent to which security solutions should go to provide the necessary protection.
 
 
+### Threat Modelling | SCRM 
+
 ## Threat Modelling 
  
 Threat modelling can be performed proacively or reactively. In both cases, a threat is identified,categorised and analysed. 
-
-Below is an illustration showing the basic steps of threat modelling. 
-
 
 
 **Identifying Threats**
@@ -269,7 +246,6 @@ PASTA threat modelling combines an attacker perspective of a business with risk 
 
 
 
-
 **VAST**
 
 Visual, Agile, and Simple Threat (VAST) 
@@ -284,3 +260,22 @@ The Disaster, Reproducibility, Exploitability, Affected Users, and Discoverabili
 - Exploitability: How hard is it to perform the attack?
 - Affected Users: How many users are likely to be affected by the attack (as a percentage)?
 - Discoverability: How hard is it for an attacker to discover the weakness?
+
+**Reduction Analysis**
+
+Trust Boundaries   Any location where the level of trust or security changes
+Dataflow Paths   The movement of data between locations
+Input Points   Locations where external input is received
+Privileged Operations   Any activity that requires greater privileges than of a standard user account or process, typically required to make system changes or alter security
+Details about Security Stance and Approach   The declaration of the security policy, security foundations, and security assumptions
+
+### SCRM 
+
+Understand what Supply chain is and the impact on security 
+
+Most computers, devices, networks, systems, and even cloud services are not built by a single entity.
+Often the CPU, memory, drive controllers, hard drives, SSDs, and video cards are created by other third-party vendors
+
+Definition: Supply chain risk management (SCRM) is the means to ensure that all of the vendors or links in the supply chain are reliable, trustworthy, reputable organizations that disclose their practices and security requirements to their business partners (although not necessarily to the public).
+The goal of a secure supply chain is to ensure that the finished product is of sufficient quality, meets performance and operational goals, and provides stated security mechanisms, and that at no point in the process was any element counterfeited or subjected to unauthorized or malicious manipulation or sabotage. 
+
