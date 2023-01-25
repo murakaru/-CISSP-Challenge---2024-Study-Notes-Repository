@@ -329,6 +329,7 @@ State privacy
 
 Hand written notes of chapter 19 
 
+![image](https://user-images.githubusercontent.com/19290577/214577001-6cf67fbc-ad2d-45ee-b793-475d3bf7e39c.png)
 
 
 **Code of ethics**
