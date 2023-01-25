@@ -334,3 +334,6 @@ Hand written notes of chapter 19
 
 **Code of ethics**
 **Investigation Types** 
+
+![image](https://user-images.githubusercontent.com/19290577/214587221-f58067fa-98f7-4fe0-b3a5-8e9c7d162a1f.png)
+
