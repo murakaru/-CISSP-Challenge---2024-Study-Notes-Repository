@@ -221,8 +221,6 @@ So how due you disapprove **negligence** in the occurrence of a loss?  Due Dilig
 - **Security policy**: A document that defines the scope of security needed by the organization. It discusses the assets that require protection and the extent to which security solutions should go to provide the necessary protection.
 
 
-### Threat Modelling | SCRM 
-
 ## Threat Modelling 
  
 Threat modelling can be performed proacively or reactively. In both cases, a threat is identified,categorised and analysed. 
