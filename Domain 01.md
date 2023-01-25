@@ -277,3 +277,59 @@ Often the CPU, memory, drive controllers, hard drives, SSDs, and video cards are
 Definition: Supply chain risk management (SCRM) is the means to ensure that all of the vendors or links in the supply chain are reliable, trustworthy, reputable organizations that disclose their practices and security requirements to their business partners (although not necessarily to the public).
 The goal of a secure supply chain is to ensure that the finished product is of sufficient quality, meets performance and operational goals, and provides stated security mechanisms, and that at no point in the process was any element counterfeited or subjected to unauthorized or malicious manipulation or sabotage. 
 
+
+
+
+# Chapter 2 
+
+## Personnel Sec Policies  
+
+How to create and enforce personnel sec policies in the workplace 
+
+
+## Risk Management concepts
+
+**Threats vs Vulnerabilities**
+**Risk assessment/analysis**
+**Risk response**
+**Countermeasure selection and implementation**
+**Types of controls**
+**security and privacy**
+**Risk frameworks**
+
+
+## Security awareness and training 
+
+**How do we create awareness and training?**
+**Content reviews** 
+**Measuring Program Effectiveness**
+
+
+
+
+# Chapter 3 
+## BCP 
+
+**Business continuity**
+
+**Project Scope and planning**
+**Project Continuity**
+
+# Chapter 4 
+## Compliance
+
+**Laws**
+
+Categories
+State privacy 
+##Legal and regulatory issues 
+
+
+# Chapter 19 
+
+Hand written notes of chapter 19 
+
+
+
+**Code of ethics**
+**Investigation Types** 
