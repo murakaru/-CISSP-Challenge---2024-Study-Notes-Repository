@@ -1,5 +1,5 @@
 
-## Domain 1: Security and Risk Management  
+# Domain 1: Security and Risk Management  
 
 With reference to the official guide, Domain 1 contains the below chapter and contents 
 
@@ -20,7 +20,7 @@ This section aims to explain the *CIA* triad, *AAA* security framework and other
 - IAAA
 
 
-## CIA triad 
+### CIA triad 
 
 ![image](https://user-images.githubusercontent.com/19290577/213007046-ed4c256b-afd5-4717-9a35-710e7f4ae840.png)
 
