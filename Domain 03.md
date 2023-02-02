@@ -18,24 +18,25 @@ With reference to the official guide, Domain 1 contains the below chapter and co
 ### Threat Modelling 
 
 Identifying, Categorising and analysing potential threats.
+
 Objective of Threat Modelling: To prioritize the potential threats against an organization's valuable assets.
--- Proactive approach: during design and development.  It is a defensive approach to threat modelling: takes place during initial design. Based on predicting threats and designing specific defenses during the coding and crafting process.
--- Reactive approach: once product is created and deployed. Takes care of the threats that could not be predicted during the design phase. It addresses unforeseen issues. This is known as thrat hunting or adversarial approach.
+- Proactive approach: during design and development.  It is a defensive approach to threat modelling: takes place during initial design. Based on predicting threats and designing specific defenses during the coding and crafting process.
+- Reactive approach: once product is created and deployed. Takes care of the threats that could not be predicted during the design phase. It addresses unforeseen issues. This is known as thrat hunting or adversarial approach.
 
 Microsoft SDLC goals in threat modelling 
 
--- Reduce sec related design and coding defects 
--- Reduce severity of remaining threats
+- Reduce sec related design and coding defects 
+- Reduce severity of remaining threats
 
 Fuzz testing: dynamic testing technique that provides many different types of input to software to stress its limits and find previously undetected flaws
 
 
 **Identifying threats**
-How do we indentify threats? 
+How do we identify threats? 
 
-Focus on Assets: Determine the value of assets bafore identifying the threats 
-Focus on Attackers: Identify attackers and their motivations, goals, TTPs 
-Focus on Software: This is specific to comapanies that develops software. 
+- Focus on Assets: Determine the value of assets bafore identifying the threats 
+- Focus on Attackers: Identify attackers and their motivations, goals, TTPs 
+- Focus on Software: This is specific to comapanies that develops software. 
 
 Guides/References for Threat Modelling 
 
@@ -46,8 +47,6 @@ Guides/References for Threat Modelling
 **Stride** 
 
 ![image](https://user-images.githubusercontent.com/19290577/216434624-314d2ad2-f616-4155-8e06-7e7f0ffc2d67.png)
-
-
 
 **Pasta: Process of Attack, simulation and Threat Analysis**
 
@@ -68,11 +67,11 @@ Objective of risk reduction: Gain greater understanding of the logic of the prod
 
 Concepts when decomposing the process 
 
--- Trust Boundaries : Any location where the level of trust or security changes
--- Dataflow Paths: The movement of data between locations
--- Input Points: Locations where external input is received
--- Privileged Operations: Any activity that requires greater privileges than of a standard user account or process, typically required to make system changes or alter security
--- Details about Security Stance and Approach: The declaration of the security policy, security foundations, and security assumptions
+- Trust Boundaries : Any location where the level of trust or security changes
+- Dataflow Paths: The movement of data between locations
+- Input Points: Locations where external input is received
+- Privileged Operations: Any activity that requires greater privileges than of a standard user account or process, typically required to make system changes or alter security
+- Details about Security Stance and Approach: The declaration of the security policy, security foundations, and security assumptions
 
 
 Once threats are identified, they should be fully documented by defining the means, target, and consequences of a threat.
@@ -83,11 +82,11 @@ After documentation, the next step is to rank or rate the threats. This can be a
 
 The Disaster, Reproducibility, Exploitability, Affected Users, and Discoverability (DREAD)
 
--- Damage Potential: How severe is the damage likely to be if the threat is realized?
--- Reproducibility: How complicated is it for attackers to reproduce the exploit?
--- Exploitability: How hard is it to perform the attack?
--- Affected Users: How many users are likely to be affected by the attack (as a percentage)?
--- Discoverability: How hard is it for an attacker to discover the weakness?
+- Damage Potential: How severe is the damage likely to be if the threat is realized?
+- Reproducibility: How complicated is it for attackers to reproduce the exploit?
+- Exploitability: How hard is it to perform the attack?
+- Affected Users: How many users are likely to be affected by the attack (as a percentage)?
+- Discoverability: How hard is it for an attacker to discover the weakness?
 
 
 ### Defence in depth 
@@ -95,4 +94,149 @@ The Disaster, Reproducibility, Exploitability, Affected Users, and Discoverabili
 Terms related to defense in depth:  Layering, levels, classifications, zones , realms , compartments , Silos , segmentations, lattice structure, and protection rings
 Multiple contols in series - One after the other. 
 Objective: No one control can protect against all threats 
+
+
+## Chapter 7: PKI and Cryptographic Applications
+
+asymmetric cryptosystems use pairs of public and private keys to facilitate secure communication without the overhead of complex key distribution systems.
+
+*Common Asymetric cyptosystems today8
+
+-- Rivest–Shamir–Adleman (RSA), 
+-- Diffie–Hellman, 
+-- ElGamal,
+-- elliptic curve cryptography (ECC).
+
+*public key cryptosystems*
+
+each user is assigned a pair of keys: a public key and a private key.
+The user make their public keys freely available to anyone with whom they want to communicate. - No weakness is introduced by this. 
+The private key, is reserved for user - who owns the keys. private key should not be shared outside of key escrow and recovery arrangements.
+
+The sender encrypts the plaintext message (P) with the recipient's public key to create the ciphertext message (C). When the recipient opens the ciphertext message, they decrypt it using their private key to view the original plaintext message.
+Once the sender encrypts the message with the recipient's public key, no user (including the sender) can decrypt that message without knowing the recipient's private key (the second half of the public-private key pair used to generate the message).
+
+
+Keys used within public key systems must be longer than those used in private key systems to produce cryptosystems of equivalent strengths.
+
+Public key cyptography has high computational requirements 
+
+**RSA**
+
+3 creators: Ronald Rivest, Adi Shamir, and Leonard Adleman
+
+*RSA Algorithm* 
+- Choose two large prime numbers (approximately 200 digits each), labeled p and q.
+- Compute the product of those two numbers: n = p * q.
+- Select a number, e, that satisfies the following two requirements:
+----- e is less than n.
+----- e and (p – 1)(q – 1) are relatively prime—that is, the two numbers have no common factors other than 1.
+- Find a number, d, such that ed = 1 mod ((p – 1)(q – 1)).
+- Distribute e and n as the public key to all cryptosystem users. Keep d secret as the private key.
+
+
+**key length**
+
+- Symmettric: 128bits 
+- RSA: 3.072 bits 
+- Elliptic Curve: 256 bits 
+
+
+**Elgamal**
+
+Extended the Diffie-Hellman key exchange algorithm
+Publised in 1985
+Advantage: AT thge time of release, it was available to the public unlike RSA. 
+Disadvantage: The algorithm doubles the size of any message that it encrypts hence a major hardship when encrypting large amounts of data that must be sent over a network.
+
+**Elliptic Curve**
+ Published in 1985
+ Publishers: Neal Koblitz from the University of Washington and Victor Miller from IBM. 
+ 
+ 
+ **Diffie - Hellman key exchange**
+Allows two individuals to generate a shared secret key over an insecure communications channel.
+Hence, they may use public key cryptography to generate a shared secret key that they then use to communicate with a symmetric encryption algorithm
+This approach is known as hybrid cryptography
+Uses Prime numbers, like RSA 
+Its a key exchange protocol and not an encyption protocol. 
+it is commonly used to create a shared secret key for use in Transport Layer Security (TLS), where it is referred to as either DHE or EDH
+
+**Quantum Cryptography**
+
+we can use principles of quantum mechanics to replace the binary 1 and 0 bits of digital computing with multidimensional quantum bits known as qubits.
+quantum supremacy: the potential that quantum computers may be able to solve problems that are not possible to solve on contemporary computers.
+it could render popular algorithms such as RSA and Diffie–Hellman insecure.
+
+
+**Hash Functions**
+
+*Purpose*: they take a potentially long message and generate a unique output value derived from the content of the message (Message digest). Message digests can be generated by the sender of a message and transmitted to the recipient along with the full message for two reasons.
+
+- Integrity check. The recipient can use the same hash function to recompute the message digest from the full message. They can then compare the computed message digest to the transmitted one to ensure that the message sent by the originator is the same one received by the recipient.
+
+- The message digest can be used to implement a digital signature algorithm.
+
+Size of message digest: 128 bits or longer. The longer the message digest, the more reliable its verification of integrity.
+
+*Requirements for a hash function*
+- The input can be of any length.
+- The output has a fixed length.
+- The hash function is relatively easy to compute for any input.
+- The hash function is one-way (meaning that it is extremely hard to determine the input when provided with the output). 
+- The hash function is collision resistant (meaning that it is extremely hard to find two messages that produce the same hash value).
+
+
+**SHA**
+
+Secure Hash Algorithm
+Successors: SHA-1, SHA-2, and SHA-3 
+They are promoted by NIST 
+They are specified in SHS (Secure Hash Standard) and FIPS (Federal Information Processing Standard) 
+
+*SHA-1*
+Input = Any length 
+Output = 180 bit message digest
+Processing of message = In 512 bit blocks, if message is not a multiple of 512, it pads the message.
+Currently not supported since 2017. 
+
+*SHA-2*
+This has 4 variants 
+
+- SHA-256:Output = 256 bit message digest using a 512-bit block size.
+- SHA-224: uses a truncated version of the SHA-256 hash that drops 32 bits to produce a 224-bit message digest using a 512-bit block size.
+- SHA-512: produces a 512-bit message digest using a 1,024-bit block size.
+- SHA-384 uses a truncated version of the SHA-512 hash that drops 128 bits to produce a 384-bit digest using a 1,024-bit block size.
+
+*SHA-3*
+Keccak algorithm
+Announcesd in 2015
+it is slower than SHA-2, so SHA-3 is not commonly used outside of some specialized cases where the algorithm is efficiently implemented in hardware.
+
+*MD5*
+Creator: Ronald Rivest in 1991
+It also processes 512-bit blocks of the message, but it uses four distinct rounds of computation to produce a digest of the same length as the MD2 and MD4 algorithms (128 bits).
+Advantage: It is fast
+Disadvantage: MD5 protocol is subject to collisions
+
+*RipeMD*
+an alternative to the SHA family that is used in some applications, such as Bitcoin cryptocurrency implementations
+
+- RIPEMD produced a 128-bit digest and contained some structural flaws that rendered it insecure.
+- RIPEMD-128 replaced RIPEMD, also producing a 128-bit digest, but it is also no longer considered secure.
+- RIPEMD-160 is the replacement for RIPEMD-128 that remains secure today and is the most commonly used of the RIPEMD variants. It produces a 160-bit hash value.
+ 
+
+
+Comparison of Hash Algorithm Value Lengths
+
+
+Digital Signatures 
+
+
+
+
+### Cryptographic systems and solutions
+
+### cryptanalytic attacks
 
