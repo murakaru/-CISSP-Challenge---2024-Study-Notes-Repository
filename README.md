@@ -18,7 +18,7 @@ All diagrams and illustrations created by me on Diagrams.net
 - domain 07
 - domain 08
 
-# CISSP 2022 - Resources/Materials
+# CISSP 2024 - Resources/Materials
 --------------------------------
 - Official Study guide
 - ISC app for CISSP
