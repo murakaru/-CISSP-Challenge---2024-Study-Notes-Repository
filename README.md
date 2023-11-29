@@ -6,7 +6,7 @@
 All diagrams and illustrations created by me on Diagrams.net 
 
 
-# CISSP 2022 - Study Plan - 100 Days
+# CISSP 2024 - Study Plan - 100 Days
 ----------------------------------
 
 - domain 01
