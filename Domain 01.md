@@ -189,11 +189,25 @@ Nb/ Note the difference between 27001 and 27002 for the CISSP exam
   
 
 
-**NIST Frameworks**
+**NIST RMF**
 
 - NIST 800-53 Rev. 5
 - NIST Risk Management Framework
 - NIST Cybersecurity Framework
+
+## The Nist RMF
+
+https://csrc.nist.gov/projects/risk-management/about-rmf
+
+There are seven steps in the RMF:
+  
+- prepare: Prepare refers to activities that are necessary to manage security and privacy risks before a breach occurs
+- categorize:which is used to develop risk management processes and tasks. Security professionals then use those processes and develop tasks by thinking about how the confidentiality, integrity, and availability of systems and information can be impacted by risk.
+- select: Select means to choose, customize, and capture documentation of the controls that protect an organization. An example of the select step would be keeping a playbook up-to-date or helping to manage other documentation that allows you and your team to address issues more efficiently.
+- implement:implement security and privacy plans for the organization. Having good plans in place is essential for minimizing the impact of ongoing security risks. 
+- assess:Assess means to determine if established controls are implemented correctly. An organization always wants to operate as efficiently as possible. So it's essential to take the time to analyze whether the implemented protocols, procedures, and controls that are in place are meeting organizational needs.
+- authorize:Authorize means being accountable for the security and privacy risks that may exist in an organization. As an analyst, the authorization step could involve generating reports, developing plans of action, and establishing project milestones that are aligned to your organization's security goals.
+- monitor:Monitor means to be aware of how systems are operating. Assessing and maintaining technical operations are tasks that analysts complete daily. Part of maintaining a low level of risk for an organization is knowing how the current systems support the organization's security goals. If the systems in place don't meet those goals, changes may be needed.
 
 **Other Frameworks to note**
 
