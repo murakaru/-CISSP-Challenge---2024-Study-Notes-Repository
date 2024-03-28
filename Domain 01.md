@@ -201,6 +201,21 @@ Nb/ Note the difference between 27001 and 27002 for the CISSP exam
 - Capability Maturity Model (CMMI): Software developers maturity rating 
 - Six Sigma: Developed for identifying manufacturing defects but can be used to measure the success factors of security framework.
 
+The Federal Energy Regulatory Commission - North American Electric Reliability Corporation (FERC-NERC)
+FERC-NERC is a regulation that applies to organizations that work with electricity or that are involved with the U.S. and North American power grid. These types of organizations have an obligation to prepare for, mitigate, and report any potential security incident that can negatively affect the power grid. They are also legally required to adhere to the Critical Infrastructure Protection (CIP) Reliability Standards defined by the FERC. 
+
+
+The Federal Risk and Authorization Management Program (FedRAMP®)
+FedRAMP is a U.S. federal government program that standardizes security assessment, authorization, monitoring, and handling of cloud services and product offerings. Its purpose is to provide consistency across the government sector and third-party cloud providers. 
+
+
+Center for Internet Security (CIS®)
+CIS is a nonprofit with multiple areas of emphasis. It provides a set of controls that can be used to safeguard systems and networks against attacks. Its purpose is to help organizations establish a better plan of defense. CIS also provides actionable controls that security professionals may follow if a security incident occurs. 
+
+General Data Protection Regulation (GDPR)
+GDPR is a European Union (E.U.) general data regulation that protects the processing of E.U. residents’ data and their right to privacy in and out of E.U. territory. For example, if an organization is not being transparent about the data they are holding about an E.U. citizen and why they are holding that data, this is an infringement that can result in a fine to the organization. Additionally, if a breach occurs and an E.U. citizen’s data is compromised, they must be informed. The affected organization has 72 hours to notify the E.U. citizen about the breach.
+
+
 **Due Diligence vs Due Care**
 
 So how due you disapprove **negligence** in the occurrence of a loss?  Due Diligence and Due Care. What's the difference between the two? 
