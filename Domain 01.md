@@ -20,7 +20,7 @@ This section aims to explain the *Security concepts* below
 - IAAA
 
 **CIA Triad**
-- *Confidentiality*: The goal of confidentiality protection is to prevent or minimize unauthorized access to data. Confidentiality protections prevent disclosure while protecting authorized access.
+- *Confidentiality*: The goal of confidentiality protection is to prevent or minimize unauthorized access to data. Confidentiality protections prevent disclosure while protecting authorized access. In an organization, confidentiality can be enhanced through the implementation of design principles, such as the principle of least privilege. The principle of least privilege limits users' access to only the information they need to complete work-related tasks.
 - *Integrtity*: concept of protecting the reliability and correctness of data. Integrity protection prevents unauthorized alterations of data. Properly implemented integrity protection provides a means for authorized changes while protecting against intended and malicious unauthorized activities (such as viruses and intrusions) as well as mistakes made by authorized users (such as accidents or oversights).
 - *Availablity*: Availability means authorized subjects are granted timely and uninterrupted access to objects.
 
@@ -192,7 +192,7 @@ Nb/ Note the difference between 27001 and 27002 for the CISSP exam
 **NIST RMF**
 
 - NIST 800-53 Rev. 5
-- NIST Risk Management Framework
+- NIST Risk Management Framework (RMF) 
 - NIST Cybersecurity Framework
 
 ## The Nist RMF
@@ -208,6 +208,35 @@ There are seven steps in the RMF:
 - assess:Assess means to determine if established controls are implemented correctly. An organization always wants to operate as efficiently as possible. So it's essential to take the time to analyze whether the implemented protocols, procedures, and controls that are in place are meeting organizational needs.
 - authorize:Authorize means being accountable for the security and privacy risks that may exist in an organization. As an analyst, the authorization step could involve generating reports, developing plans of action, and establishing project milestones that are aligned to your organization's security goals.
 - monitor:Monitor means to be aware of how systems are operating. Assessing and maintaining technical operations are tasks that analysts complete daily. Part of maintaining a low level of risk for an organization is knowing how the current systems support the organization's security goals. If the systems in place don't meet those goals, changes may be needed.
+
+ ### NIST CSF
+
+The core functions of the NIST CSF provide specific guidance and direction for security professionals
+This framework is used to develop plans to handle an incident appropriately and quickly to lower risk, protect an organization against a threat, and mitigate any potential vulnerabilities.  
+
+
+**functions of the NIST Cybersecurity Framework**
+
+identify - What  risks pose a threat in my environment?
+protect - What stategy can i use to protect the org? 
+detect - Identifying the actual incidents and improve monitoring to improve detection
+respond - Ensuring that proper procedures are used to contain, neutralise and analyse security incidents. 
+recover - Returing the affected systems to normal operation
+
+
+OWASP security Principles
+
+- The first OWASP principle is to minimize the attack surface area. An attack surface refers to all the potential vulnerabilities that a threat actor could exploit, like attack vectors, which are pathways attackers use to penetrate security defenses. Examples of common attack vectors are phishing emails and weak passwords
+  
+- The principle of least privilege means making sure that users have the least amount of access required to perform their everyday tasks. The main reason for limiting access to organizational information and resources is to reduce the amount of damage a security breach could cause.
+
+- The next principle we'll discuss is defense in depth. Defense in depth means that an organization should have multiple security controls that address risks and threats in different ways. One example of a security control is multi-factor authentication, or MFA, which requires users to take an additional step beyond simply entering their username and password to gain access to an application
+
+- nother principle is separation of duties, which can be used to prevent individuals from carrying out fraudulent or illegal activities. This principle means that no one should be given so many privileges that they can misuse the system
+
+- Keep security simple is the next principle. As the name suggests, when implementing security controls, unnecessarily complicated solutions should be avoided because they can become unmanageable.
+  
+- The last principle is to fix security issues correctly. Technology is a great tool, but can also present challenges. When a security incident occurs, security professionals are expected to identify the root cause quickly.
 
 **Other Frameworks to note**
 
@@ -325,6 +354,9 @@ How to create and enforce personnel sec policies in the workplace
 **Types of controls**
 **security and privacy**
 **Risk frameworks**
+
+
+
 
 
 ## Security awareness and training 
