@@ -1,0 +1,121 @@
+Communication and Network Securtiy 
+
+
+Chapter 11: Secure Network Architecture and components 
+Chapter 12: 
+
+Chapter 11
+
+What is a protocol? Set of rules that define communication and how data is transmitted over a medium
+What is OSI model?
+It is an abstract or theoretical model that establishes a communication standard for all computer systems.
+What are the layer of the OSI model? Application, persentation, session, transport, network,data link, physical 
+Explain the encapsulation and deencapsulation process
+Encapsulation is addirtion of header and footers to tehe data received from the top layer( application to physical)
+Deencapsulation : The stripping away of the headers and footers form the data untir (from physical to application) 
+
+
+Explain: Application layer receives data from the SW, It encapsulates this data by adding a header.This contrinues until the 
+physcial layer. The phsysical layer converts the meaasge into a stream of bits 0 and 1s for transmission over the physical medium.
+The receiving computer captures the bits from the physical medium and restructures the message. 
+It sends this to data link layer...and up the layers - This is the deencapsulation process,.When it reaches the app layer, it is sent to the intended SW recepient 
+
+PDU : Protocol Data unit - the data sent across the layers
+Transport layer - segnent 
+Network layer - Packet 
+DL layer - Frame 
+Physcoal - Bits 
+
+Application layer 
+The interface between the SW and the Stack. The SW application is not located here..we have the protocols and services required to interface 
+with the application.
+
+Presntation layer 
+Responsible for encyption and decryption
+
+Where can encryption occurr in network communication? 
+1. Pre network encryption - where the SW encrpts prior to sending the data to the application layer 
+2. Transport layer encryption - performed by TLS 
+VPN encryption- Occurs at layer 2, layer 3 and 4 , depending on the VPN technology in use. L2TP, IPSEC, openVPN
+3. Wireless encryption and the data link layer 
+4. Bulk encryption and the physical layer (Occurs at the NIC)
+
+
+Session layer 
+Established, maintains and terminates the sessions betworrn 2 computers- Simplex, half duplex, full duplex 
+Simplex - one way communication 
+Half dublex - 2 way communication, one at a time, \
+Full duplex - 2 way communication, simultaneous sending 
+
+Transport Layer 
+Manages integrity of connection 
+Controls the session. This layer establishes the rules of communication. e.g how much data can each segment contain, how to verify the message integrity
+How to determine whether data has been lost. Session rules are implemented through the handshake process
+Segmantation, sequencing, error checking, adat flow, error correction, multiplexing 
+
+Protocols: TCP, UDP, TLS 
+
+Network layer
+responsible for logocal addressing and routing 
+Source and destination ip addresses added to the segment
+Routers operate at this layer - Routers determine the bets path for a packet based on speed, hops, preference e.t.c 
+
+Routing protocols - IGPs and ERPS 
+IGPs are myopic while ERPs are far sighted 
+
+IGP: DV and LS 
+DV - Number of hops to detrmine the best path...RIP, IGRP
+LS - router characteristivs to determine the best path. - Jitter, latency, error rate e.t.c - OSPF, IS-IS, EIGRP 
+
+ERPs - Path Vector - BGP 
+
+Data Link Protocol
+IEEE 802.3
+Adding source and destination hardware addresses. (Mac addresses)
+Mac address: 48 bits - 24 bits (OIU), 24 bits(manufacturer)
+Protocols : ARP , RARP, Ethernet 
+Devices that function here are switches 
+
+physical layer 
+Converts frames into bits and transmits over the physcial medium. 
+Devices that function at Layer 1: NICs, Hubs, repeaters, concentrators and amplifiers 
+
+TCP/IP Model 
+Also called the Darpa or DOD
+Consuits of 4 layers : Applicatipon, Transport, Internet, Network access 
+
+Some of the TCP/IP vulnerabilities 
+:Buffer overflow , SYN flood attacks, DOS attacks, Fragment attacks, Oversized packet attacks, Spoofing attacks, man in the middle 
+hijack attacks, coding error attacks . 
+
+
+A protocol analyser is used to examine the content of network traffic. Also called sniffer, network evaluator, network analyser or packet capturing utility 
+Can be a dedicated SW of HW device
+Captures the frame or packet and uses complex tools to analyse. 
+It places the NIC into promiscous mode to see and capture all the ethernet frames on the LAN. In this mode, the NIC ignotes the dectination address of the frames and collects all the frames that reach the interface
+Exampines to the binary level
+The payload is displayed in hexa or ASCII 
+Protocol analysers offer capture filter and display filter
+Capture filter: Decides which frames are captured and saved. 
+Dispay filter: Show only frames from  the packet file that match your requirements 
+
+Exmaples - Wireshark (Opne source) , Onmipeek, netwitness(commercial) 
+
+Application layer Protocols 
+
+|protocol  |  port          |     function 
+--------------------------------------------
+|Telnet    |    23          |  Terminal Emulation network application - remote connectivity between hosts for communication - USE SSH  instead
+|FTP       |    20/21       |  File Transfer Protocol - Exchange of files that requires authentication - Should FTPS instead
+|TFTP      |    UDP 69      |  Trivial File transfer - Does not require authentication - Can host netwoek device config files - Should not be used
+|SMTP      |    25          |  Sends email messages from client to server and between email servers - Only use if encrypted with TLS to crearte SMTPS
+|POP3      |    110         |  Post Office protocol- Used to pull emails from inbox in the email server to email client(client archiving) - Use if enctrpted with TLS to create POPS
+|IMAP4     |    143         |  Intrnet Message Access Protocol - Used to pull emails from inbox in the email server to email client(client archiving)Has ability to retrieve only headers from the email server and delete messages directly on the server
+|DHCP      |    UDP 67/68   |  Dynamic Host Control Protocol - Centralised control of TCP/IP configs 
+|HTTP      |    80          |  HyperText Transfer protocol - Transmits web pages from web server to web browser in clear text 
+|HTTPS     |    443         |  HyperTect Transfer Protocol - Transmits web pages from web server to web browser securely - TLS encrypted version of HTTP
+|LDP       |    515         |  Used to send pribt jobs to a printer
+|NFS       |    2049        |  Supports file sharing across dissimilar systems
+|SNMP      |    UDP 161/162 |  Collects network helath and status information from a central monitoring station. 
+
+
