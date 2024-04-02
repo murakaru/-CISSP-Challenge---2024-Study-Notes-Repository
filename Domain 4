@@ -119,3 +119,107 @@ Application layer Protocols
 |SNMP      |    UDP 161/162 |  Collects network helath and status information from a central monitoring station. 
 
 
+Transport layer protocols 
+Connections are established using ports 
+Ports are 16 digit binary numbers 
+The total number of ports are 2^16 = 65536 
+Ports are numbered 0 to 65,535
+Socket: Combination of a port and IP 
+0-1023 - well known ports or service ports - to be used by servers
+1024 - 49151 - registered software ports - For IANA registered softwares 
+49,152 - 65,535 - Random or dynamic ports used randomly by clients as source ports 
+
+Protocols at transport layer : TCP and UDP 
+TCP : Transmission Control Protocol - Full duplex connection oriented protocol , because of three way handshake 
+UDP : User Datagram protocol - Simplex conectionless protocol - Best effort - low overhead, fast data transmission- Audio and video communications 
+
+Three way handshake 
+
+SYN - Syncronise sent form client to server 
+SYN ACK - From Server to client - Syncronised and acknowledged
+ACK - Client to server 
+
+How do you disconnect a communication session when it is complete? 
+1. FIN (finish)
+2. RST (reset) 
+
+Domain Name System 
+What is DNS? Resolves human friendly domain name to an IP address 
+Then ARP which resolves the IP address into the MAC address
+DNS reverse kookup: resolves the IP address into the domain name
+
+DNS is hierachical naming system 
+DNS links IP addresses and human friendly FQDN 
+FQDN consists of 
+1. Top level Domain (TLD) - .com
+2. Registered domain name: 
+3. Subdomain 
+
+Maximum length of FQDN - 253 characters 
+
+The process of DNS 
+Historically, the mapping used to be stored on a hosts file. However, this caused a security concern as hackers would be able to alter this file. 
+When client software points to an FQDN, the resolver first checks the local DNS cache
+Local DNS cache has the local hosts files and alny query results that havent timed out. 
+If not in the DNS cache, the request is forwarded to the DNS server
+
+DNS runs on TCP and UDP 53 
+TCP 53 - zone transfers 
+UDP 53 - for typical requests 
+
+DNSSEC - provides mutual cert authentication and encrypted sessions between devices during DNS operations.. Applies to DNS servers only.
+
+Non-DNS servers should use DoH. This creates an encrypted session with a DNS server of TLS protected HTTP and uses that session as a form of VPN to protect the DNS query and response
+In 2020, we had, the ODOH (oblivious DNS over HTTPs) - this adds a DNS proxy between the client and DNS resolver so that the identity of requesting client is isolated from the DNS reslover. 
+This provides anonymity and privacy to DNS queries.
+
+
+DNS Poisoning 
+The process of falsifying the DNS information used by client to reach a destination.
+
+1. Rogue DNS server - The client sends a request to the DNS server. A rogue DNS server listens to the network traffic and responds to the client with falsified information.
+Once client received the false information, the DNS quesry session is closed and hence the response form the reasl server id dropped and ignored. 
+
+2. DNS Cache Poisoning 
+This is a direct attack on the DNS servers by altering the primary record. There are 2 ways adverseries achieve this 
+    - Attacking the authoritative DNS servers - this are the primary servers. Easily monitored by community hence not impactful on clients 
+    - Attacking the DNS caching servers - These cache information from other DNS servers and might take long to be discoverd. 
+
+3. DNS pharming 
+Melicious redirection of valid websites URL or IP addresses to a fake website. Can be achieved by modifying the Local hosts file or poisonong or spoofing DNS resolution. 
+
+4. Host file alteration 
+An attacker plants false information into the hosts file. This affects specific clients 
+
+5. DNS query spoofing 
+Attacker intercepty the DNS session and eavedroping on the query. Attacker sends back a reply with false info. 
+
+6. Use proxy falsification 
+
+Defenses against DNS poisoning 
+
+1. Limit zone transfers from internal DNS servers to external DNS servers - Blocking inbound TCP and UDP 53 
+2. Require resolution through internal DNS. This requires blocking outbound UDP port 53 while keeping outbound TCP 53 open. 
+3. Limit external DNS servers form which internal DNS servers pull zone transfers 
+4. deploy Network IDS(NIDS) and Host IDS (HIDS) to monitor abnormal DNS traffic 
+5. Harden DNS, servers, clients 
+6. Use DNSSEC to secure DNS infra
+7. Use DoH or ODOH 
+
+Another - orgs can use split DNS 
+
+What is Split DNS?
+2 DNs servers - One public, one internal 
+For the public, all data in the zone file should be accessible by the public via probing or querying 
+For the internal DNS - this is only accessible to the internal systems 
+ousiders cannot access the internal DNs as TCP and UDP 53 inbound is blocked 
+Internal systems can be configured to only interact with the internal DNS server or send quesries to an external DNS server(for which a FDW in stateful 
+mode is configured to allow the responses from approved outbound queries. 
+
+Another  DNS Sinkhole
+These provide false responses for DNS queries from Malware e.g bots so as to prevent access to cnc . It also protects users from visitinh lknown malicious websites .
+
+
+
+
+
