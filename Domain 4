@@ -286,5 +286,20 @@ It is preinstalled on many Linux distributions.
 tcpdump provides a brief packet analysis and converts key information about network traffic into formats easily read by humans.
 tcpdump also displays the source IP address, destination IP addresses, and the port numbers being used in the communications. 
 
+https://github.com/murakaru/-CISSP-Challenge---2024-Study-Notes-Repository/issues/19#issue-2222613439
+
+
+Timestamp: The output begins with the timestamp, formatted as hours, minutes, seconds, and fractions of a second.  
+
+Source IP: The packet’s origin is provided by its source IP address.
+
+Source port: This port number is where the packet originated.
+
+Destination IP: The destination IP address is where the packet is being transmitted to.
+
+Destination port: This port number is where the packet is being transmitted to.
+
+
+
 
 
