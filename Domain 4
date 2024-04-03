@@ -67,7 +67,26 @@ IGP: DV and LS
 DV - Number of hops to detrmine the best path...RIP, IGRP
 LS - router characteristivs to determine the best path. - Jitter, latency, error rate e.t.c - OSPF, IS-IS, EIGRP 
 
+
 ERPs - Path Vector - BGP 
+
+Ip header: Source and destination IP, destination Mac address, protocol 
+Format of IPV4 packet 
+Header size: 20 to 60 bytes
+The first 20 bytes: Fixed set of information contraining data such as source and destination adress. 
+The last set of 1 to 40 bytes consits of the options field 
+Data section
+Max size is 65,535 bytes
+
+Differences between IPV4 and IPv6 
+Length and dormat of addresses
+IPV4: 4 octets, decimal separation, upto 4.3billion addresses. 
+IPV6: 8 octets, colon sepator, hexadecimal , upto 340undecillion addresses 
+Header: IPv6 is simpler than IPv4 
+
+IPV6 header components: destination, source, payload length, next header, hop limit, Flow label, traffic class, version 
+IPV4 header components: Version, ToS, total leengty, flags, identifocation, protocol, TTL, souce, destination, padding..
+
 
 Data Link Protocol
 IEEE 802.3
@@ -117,6 +136,7 @@ Application layer Protocols
 |LDP       |    515         |  Used to send pribt jobs to a printer
 |NFS       |    2049        |  Supports file sharing across dissimilar systems
 |SNMP      |    UDP 161/162 |  Collects network helath and status information from a central monitoring station. 
+|SSH       |  TCP 22        |
 
 
 Transport layer protocols 
@@ -142,6 +162,30 @@ ACK - Client to server
 How do you disconnect a communication session when it is complete? 
 1. FIN (finish)
 2. RST (reset) 
+
+Categories of network protocols 
+1. Communication protocols - TCP, UDP, HTTP, DNS 
+2. Management protocols - SNMP, ICMP 
+3. Security protocols - HTTPS, SFTP 
+
+Private Ip addresses 
+10.0.0.0 - 10.255.255.255
+172.16.0.0 - 172.31.255.255
+192.168.0.0 - 192.168.255.255 
+
+Public Ip Address 
+1.0.0.0 - 9.255.255.255
+11.0.0.0-126.255.255.255
+128.0.0.0-172.15.255.255
+172.32.0.0-192.167.255.255
+192.169.0.0-233.255.255.255
+
+
+IEEE802.11 - Wireless protocls 
+Evolution of Wifi 
+WEP - Wireless Equivalent privacy - The oldest wireless standard 
+WPA - Wifi protected Access - Improvement on WEP however, vulnerable to KRACK, issues with authentication
+WPA2 and WPA3 - WPA2 uses AES for authentication. This ensures message authentication and integrity. WPA3 has increase encyption, addresses vulnerabilities such as KRACK and uses simultaneous Autgentication of Equals 
 
 Domain Name System 
 What is DNS? Resolves human friendly domain name to an IP address 
