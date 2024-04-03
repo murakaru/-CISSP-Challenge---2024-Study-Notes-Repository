@@ -78,14 +78,7 @@ The last set of 1 to 40 bytes consits of the options field
 Data section
 Max size is 65,535 bytes
 
-Differences between IPV4 and IPv6 
-Length and dormat of addresses
-IPV4: 4 octets, decimal separation, upto 4.3billion addresses. 
-IPV6: 8 octets, colon sepator, hexadecimal , upto 340undecillion addresses 
-Header: IPv6 is simpler than IPv4 
 
-IPV6 header components: destination, source, payload length, next header, hop limit, Flow label, traffic class, version 
-IPV4 header components: Version, ToS, total leengty, flags, identifocation, protocol, TTL, souce, destination, padding..
 
 
 Data Link Protocol
@@ -261,14 +254,143 @@ Internal systems can be configured to only interact with the internal DNS server
 mode is configured to allow the responses from approved outbound queries. 
 
 Another  DNS Sinkhole
-These provide false responses for DNS queries from Malware e.g bots so as to prevent access to cnc . It also protects users from visitinh lknown malicious websites .
+These provide false responses for DNS queries from Malware e.g bots so as to prevent access to cnc . 
+It also protects users from visitinh lknown malicious websites .
+
+
+
+Domain Hijacking 
+
+Whn an attacker intententionally hijacks your domain name. 
+How? 
+1. Registering the domain immediately after you have registerd, 
+2. carries out an on-path attack or 
+3. exploits a flaws on the domain registrars end. 
+
+What is the impact of domain hijacking? 
+Customer redirection 
+Reputation loss
+
+Defence against domain hijacking? Strong authenticating e.g MFA 
+
+Typosquatting
+When an attacker takes advantage of when a user mistypes a domain mane or IP addresses. 
+The attacker predictd the typos and registers those domains. when a user misytpes, they are redirected to the attacker domain
+
+URL hijacking 
+
+
+displaying a link or product that looks like a well known product in order to mislead the users.
+
+Click jacking 
+Redirect a users clicks or selection on a web page to a maliciuos target instead of the intended destination. 
+This is achieved by adding an invisible or hidden overlay frame or image on the web pages 
+
+
+IP networking 
+
+What is IP 
+It is a protocl 
+Used to provide route addressing for data packets 
+IP is connectionless and unreliable, just like UDP  - It does not guarantee delivery of the packets, or the order in which p[ackets are delivered.
+
+
+IPV4 vs IPV6
+
+IPV4 
+most widely used in the world
+Uses 32 bit addressing scheme
+
+
+IPV6 
+Uses 128bit addressing scheme
+New features:Scped addresses, autoconfiguration and QOS
+IPSEC is native 
+
+Cocerns about migrating to IPV6 
+1. WIth the larger addressing scheme od 128 bits, there are many more addresses that attackers can use as the source address - Ip filtering an d block lists will not be effective 
+2. IPV6 secure deployment requires that all the systems adopt IPV6 
+3. Lack of NAT - this reduces security and privacy. A systems locally assigned IP is npt masked by NAT to a public IP
+
+How can IPV4 and IPV6 coexist on a network?
+1. Dual stack - having systems run both IPV4 and OPV^ and use the appropriate protocol for eacjh conversation 
+2. Tunnelling - Allows operation of a single stack of either IPV4 or IPV6 and use encapsulation to access systems of the other protocols.
+3. NAT -PT : Network address Translation - Protocol Translation (RFC 2766) - used to convert betworrnn ipV4 and IPV6 network segments betwen internal and external addresses.
+
+
+Differences between IPV4 and IPv6 
+Length and dormat of addresses
+IPV4: 4 octets, decimal separation, upto 4.3billion addresses. 
+IPV6: 8 octets, colon sepator, hexadecimal , upto 340undecillion addresses 
+Header: IPv6 is simpler than IPv4 
+
+IPV6 header components: destination, source, payload length, next header, hop limit, Flow label, traffic class, version 
+IPV4 header components: Version, ToS, total leengty, flags, identifocation, protocol, TTL, souce, destination, padding..
+
+
+IP calsses 
+
+A  0    1-126    /8
+B  10    128-191    /16
+C  110    192-223     /24
+D  1110    223-239
+E  1111    240-255
+
+
+127.0.0.0 to 127.255.255.255 is used as the loopback address. 
+Class A network of 0 is blackhole - traffic is routed inorder to be thrown away. 
+IPV6 loopback - ::1/128 - not an address, it is a notation. 
+
+ICMP 
+Used to determine the health of a link. Used by Ping, traceroute, pathping 
+ICMP uses echo packets and bounces them off remote systems. 
+Use ping to detemine is a remote system is online or not. 
+
+How can ICMP be exploited? Bandwidth DoS attacks e.g ping of death, smurf attacks and ping floods 
+
+IGMP 
+What is IGMP? 
+Internet Group management protocol 
+Allows systems to support multicasting i.e transmission of packets to multiple specific recipients 
+
+
+ARP concerns 
+What is ARP 
+Address Rsolution protocol. A layer 2 protocol.
+Resolves an IP address to a MAC address. 
+ARP is carried as the payload of an ethernet frame
+ARP uses caching and broadcasting 
+
+Steps of ARP 
+1. check the local cache - If available, use
+2. If not available, broadcast s transmitted - If the destination is in the local network, the recpient will respond..if not
+3. Us ethe default gw to transmit the communication
+
+How can ARP be abused?
+1. ARP cache poisonng - where attacker inserts bogus information into the ARP cache. 
+Time in which information remains in the cache = 10 mins 
+
+2. Create static ARP entries 
+
+How can we defend against agaist ARP based attacks? 
+1. Port security to prohibit communication with unknown, unauthorised rogue devices. 
+
+
+
+
+
+
+
+
+
+
+
 
 
 DOS attack types 
 1. SYN flooding 
 2. ICMP flloding 
 3. Ping of death - an oversized ICMP packet that is larger than 64KB
-
 Reading TCP dump logs 
 
 Common network protocol analysers 
@@ -292,12 +414,26 @@ https://github.com/murakaru/-CISSP-Challenge---2024-Study-Notes-Repository/issue
 Timestamp: The output begins with the timestamp, formatted as hours, minutes, seconds, and fractions of a second.  
 
 Source IP: The packet’s origin is provided by its source IP address.
-
 Source port: This port number is where the packet originated.
-
 Destination IP: The destination IP address is where the packet is being transmitted to.
-
 Destination port: This port number is where the packet is being transmitted to.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
