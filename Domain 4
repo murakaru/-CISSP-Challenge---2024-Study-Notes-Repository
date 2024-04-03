@@ -264,6 +264,27 @@ Another  DNS Sinkhole
 These provide false responses for DNS queries from Malware e.g bots so as to prevent access to cnc . It also protects users from visitinh lknown malicious websites .
 
 
+DOS attack types 
+1. SYN flooding 
+2. ICMP flloding 
+3. Ping of death - an oversized ICMP packet that is larger than 64KB
+
+Reading TCP dump logs 
+
+Common network protocol analysers 
+1. Solarwinds Netflow Traffic analyser 
+2. ManageEngine OPmanager
+3. Wireshark 
+4. tcpdump
+
+What is tcpdump? a command-line network protocol analyzer. 
+It is popular, lightweight–meaning it uses little memory and has a low CPU usage–and uses the open-source libpcap library. 
+tcpdump is text based, meaning all commands in tcpdump are executed in the terminal. 
+It can also be installed on other Unix-based operating systems, such as macOS®. 
+It is preinstalled on many Linux distributions.
+
+tcpdump provides a brief packet analysis and converts key information about network traffic into formats easily read by humans.
+tcpdump also displays the source IP address, destination IP addresses, and the port numbers being used in the communications. 
 
 
 
