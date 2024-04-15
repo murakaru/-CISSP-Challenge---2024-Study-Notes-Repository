@@ -217,11 +217,36 @@ This framework is used to develop plans to handle an incident appropriately and 
 
 **functions of the NIST Cybersecurity Framework**
 
+Components of the CSF
+The framework consists of three main components: the core, tiers, and profiles. In the following sections, you'll learn more about each of these CSF components.
+
+Core
+The CSF core is a set of desired cybersecurity outcomes that help organizations customize their security plan. It consists of five functions, or parts: Identify, Protect, Detect, Respond, and Recover. These functions are commonly used as an informative reference to help organizations identify their most important assets and protect those assets with appropriate safeguards. The CSF core is also used to understand ways to detect attacks and develop response and recovery plans should an attack happen.
+
+Tiers
+The CSF tiers are a way of measuring the sophistication of an organization's cybersecurity program. CSF tiers are measured on a scale of 1 to 4. Tier 1 is the lowest score, indicating that a limited set of security controls have been implemented. Overall, CSF tiers are used to assess an organization's security posture and identify areas for improvement.
+
+Profiles
+The CSF profiles are pre-made templates of the NIST CSF that are developed by a team of industry experts. CSF profiles are tailored to address the specific risks of an organization or industry. They are used to help organizations develop a baseline for their cybersecurity plans, or as a way of comparing their current cybersecurity posture to a specific industry standard.
+
+
 identify - What  risks pose a threat in my environment?
 protect - What stategy can i use to protect the org? 
 detect - Identifying the actual incidents and improve monitoring to improve detection
 respond - Ensuring that proper procedures are used to contain, neutralise and analyse security incidents. 
 recover - Returing the affected systems to normal operation
+
+Implementing the CSF
+In any scenario, the U.S. Cybersecurity and Infrastructure Security Agency (CISA) provides detailed guidance that any organization can use to implement the CSF. This is a quick overview and summary of their recommendations:
+
+Create a current profile of the security operations and outline the specific needs of your business.
+
+Perform a risk assessment to identify which of your current operations are meeting business and regulatory standards.
+
+Analyze and prioritize existing gaps in security operations that place the businesses assets at risk.
+
+Implement a plan of action to achieve your organization’s goals and objectives.
+
 
 
 OWASP security Principles
