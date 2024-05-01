@@ -20,9 +20,35 @@ This section aims to explain the *Security concepts* below
 - IAAA
 
 **CIA Triad**
-- *Confidentiality*: The goal of confidentiality protection is to prevent or minimize unauthorized access to data. Confidentiality protections prevent disclosure while protecting authorized access. In an organization, confidentiality can be enhanced through the implementation of design principles, such as the principle of least privilege. The principle of least privilege limits users' access to only the information they need to complete work-related tasks.
-- *Integrtity*: concept of protecting the reliability and correctness of data. Integrity protection prevents unauthorized alterations of data. Properly implemented integrity protection provides a means for authorized changes while protecting against intended and malicious unauthorized activities (such as viruses and intrusions) as well as mistakes made by authorized users (such as accidents or oversights).
+- *Confidentiality*: The goal of confidentiality protection is to prevent or minimize unauthorized access to data. Confidentiality protections prevent disclosure while protecting authorized access. In an organization, confidentiality can be enhanced through the implementation of design principles, such as the principle of least privilege. The principle of least privilege limits users' access to only the information they need to complete work-related tasks.Some critical definitions to undertand while discussing confidentiality include:
+  - Sensitivity - Quality of infor that can cause harm if disclosed.
+  - Discretion - Act or decision to control disclosure of information
+  - Criticality - Level to which information is mission critical.
+  - Concealment - Hiding information (concept of security through obscurity is closely related)
+  - Secrecy - Keepy information hidden
+  - Privacy - Keeping PII confidential to prevent harm of users .
+  - Seclusion - Intentional isolation of information
+  - Isolation - keeping information away from the users.
+    
+- *Integrtity*: concept of protecting the reliability and correctness of data.
+Integrity protection prevents unauthorized alterations of data. Properly implemented integrity protection provides a means for authorized changes while protecting against intended and malicious unauthorized activities (such as viruses and intrusions) as well as mistakes made by authorized users (such as accidents or oversights).
+Integrity is dependent on confidentiality and access control. Some concepts around integrity
+1. Accuracy - Ensuring the information is correct and precise
+2. Truthfulness - A reflection of the reality
+3. Validity - Being factually or logically sound
+4. Accountability - Being accountable or responsible for the actions on information
+5. Responsibility - Taking charge over someone or something
+6. Completeness - Having all the necessary components
+7. comprehensiveness - Being complete in scope.
+   
 - *Availablity*: Availability means authorized subjects are granted timely and uninterrupted access to objects.
+  This means that the users are protected against DDoS attacks and infra issues that may discrupo access to information.
+  This involves having reliable performance, redundancy, reliable backups and preventing data loss or destruction.
+  Availabilty is dependent on confidentiality and Integrity. Without these, availabity cannot be achieved.
+  Some concepts of availability are
+  1. Usability - How easy is t to use the data? How easy is it to learn and understand the information
+  2. Accessibility - Are we certain that a wide variery of individuals can access this information taking their limitations and capability into account
+  3. Timeliness - Are the resources available when needed? 
 
 
 ![image](https://user-images.githubusercontent.com/19290577/213007046-ed4c256b-afd5-4717-9a35-710e7f4ae840.png)
@@ -64,8 +90,9 @@ Countermeasures
 Threats to Availability 
 
 - Malicious Attacks e.g DDoS, physical system compromise, disgruntled employees revenge 
-- Application errors - code error in app 
+- Application errors - code error in app
 - Component failure e.g failed hardware
+- Human error - oversight or misconfiguration in a security policy 
 
 Countermeasures 
 
@@ -90,11 +117,48 @@ Opposite of CIA triad is **DAD** which stands for Disclosure,Alteration and Dest
  
  - Identification: Username, IP address, Phone number e.t.c 
  - Authentication: Prove the identification e.g psomething you know (password), something you have (ID card, passport), something you are (biometrics)
- - Authorization: What are you alloowed to access? What are the proviledges of the account? Role based access (RBAC)
+ - Authorization: What are you allowed to access? What are the proviledges of the account? Role based access (RBAC)
  - Auditing: Tracing an action to an identity through log collection
  - Accounting: Proof that a specific user performed an action in the system
 
+
+## Protection mechanisms
+
+### defence in depth 
+Also called layering
+using multiple security controls in series. Security analysts perform the controls linearly. 
+
+### Abstraction
+This is used for efficiency 
+Abstraction means classifying related elements , groups and roles.
+By abstracting the related elements, a security analyst can apply the same controls across board hence making administration processes easier. 
+
+### data Hiding 
+Preventing data from being accessed.
+The subject cannot see or access the data 
+How can we achieve data hiding? 
+1. Keep a db from being accessed by unauthorised persons
+2. Prevent app from accessing HW
+
+An example of data hiding: Stenography 
+Example: Multilevel secure system. There are multiple processes running across the different levels of the system. With data hiding, a sec analyst can ensure that the processes at one level cannot access data existing at a different system level.How can we achieve this? Place the data objects in security containers that is different form the subject objects.
+Security through obscurity - This is a litte different. It is the deliberate practise of not informing a subject about an object being [resent and hence preventing them form discovering and accessing the data object. 
+This is not a form of protection.
+
+### Encryption 
+Hiding meaning of the data. Converting plaintect to ciphertext.
+
+## Security Boundaries 
+
+What is a sec boundary?
+An intersection point between two areas - subnets, perimeter - that have different sec requirements. 
+Exists betwen high sec area and low sec area. These need to be clearly defined.
+
+
 ### Security Governance principles
+Who performs security governance? BoD or CEO or CISO 
+What is sec governance? This is how we compare sec processes and infrastrure within an organisation with knowledge and insights obtained from external structure.
+Which external frameworks can be used? NIST SP 800-53 and NIST SP 800-100. 
 
 This section explains how organizations should align their security function to business strategy, goals, mission, and objectives. 
 We will also look into the organizational roles and responsibilities from a security perspective and the common Security control frameworks that organizations can align with as they design their security strategy. 
