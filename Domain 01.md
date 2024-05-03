@@ -138,7 +138,7 @@ Preventing data from being accessed.
 The subject cannot see or access the data 
 How can we achieve data hiding? 
 1. Keep a db from being accessed by unauthorised persons
-2. Prevent app from accessing HW
+2. Prevent/limiting   app from accessing HW
 
 An example of data hiding: Stenography 
 Example: Multilevel secure system. There are multiple processes running across the different levels of the system. With data hiding, a sec analyst can ensure that the processes at one level cannot access data existing at a different system level.How can we achieve this? Place the data objects in security containers that is different form the subject objects.
