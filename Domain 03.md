@@ -227,13 +227,117 @@ an alternative to the SHA family that is used in some applications, such as Bitc
 - RIPEMD-160 is the replacement for RIPEMD-128 that remains secure today and is the most commonly used of the RIPEMD variants. It produces a 160-bit hash value.
  
 
-
 Comparison of Hash Algorithm Value Lengths
 
+HAVAL - 128,160,192,224,256
+HMAC - Variable
+MD5 - 128
+SHA1 - 160
+SHA2,224/SHA3,224 - 224
+SHA2,256/SHA3,256 - 256
+SHA2,384/SHA3,384 - 384
+SHA2,512/SHA3,512 - 512
+RIPEMD128 - 128
+RIPEMD160 - 160
+RIPEMD256 - 256
+RIPEMD320 - 320
 
 Digital Signatures 
 
+What is a digital signature? How do we get it? 
 
+Function: 
+-Enforce non-repudiation to ensure that the message truly came from the sender. 
+-Ensure integrity - that the message was not altered in transit(maliciously or accidentally)
+
+Applications of Digital signatures 
+- Authenticate code distributions and s/w patches
+
+Generating a digital signature 
+Digital signatures rely on Public key cryptography and hash algorithms 
+
+Steps. 
+
+Sender side
+Run the message through a hashing algorithm to generate a message digest 
+Run the message digest through an encryption algorithm (use senders private key) to generate a digital signature 
+Attach the digital signature to the message and send to recipient 
+
+Receiver side
+Run the digital signature through a decryption algorithm (use senders public key) 
+Run the message through a hashing algorithm ro generate a message digest. 
+The receiver compares the message digest received with the generated digest. If they match, integrity is maintained. If not,the message was altered in transit. 
+
+How do we provide confidentiality with digital signatures? 
+Lets look at the same case above 
+
+Sender side
+Run the message through a hashing algorithm to generate a message digest 
+Run the message digest through an encryption algorithm (use senders private key) to generate a digital signature 
+Attach the digital signature to the message 
+Run the message and digital signature through an encryption algorithm (using the receivers public key) 
+
+Receiver side
+Use the receivers private key to decrypt the message. 
+Run the digital signature through a decryption algorithm (use senders public key) 
+Run the message through a hashing algorithm ro generate a message digest. 
+The receiver compares the message digest received with the generated digest. If they match, integrity is maintained. If not,the message was altered in transit. 
+
+Adding the few steps above ensures confidentiality as the entire message is encryped before transmission. 
+Encrrpted using receivers public key and decryped using the receivers private key. 
+
+
+HMAC 
+This stands for Hashing Message Authentication Code 
+It implements partial digital signatures to ensure integrity during transmission 
+However, this does not provide non repudiation. 
+
+Which key should you use?
+When you want to encrypt a confidential message? Use the receivers public key 
+When you want to decrypt a confidential message? Use the receivers private key 
+When you want to digitally sign a message you are sending? Use the senders private key 
+When verifying the signature on a message received? Use the senders public key 
+
+HMAC combines with other hashing algoriths such as MD5, SHA2, SHA3 using a shared secret key. 
+Where would one apply HMAC? Where symettric keys are used. It serves as a middleground between encrypted message digest algorithm and computationally expensive digital signatures based on PKI 
+
+Digital Signature Standard
+This is a document that specifies federally approved digital signature algorithms. 
+This standard specifies approved encyption algorithms 
+1. DSA - Digital Signature Algorithm specifies in FIPs 186-4
+2. RSA algorithm
+3. ECDSA - Elliptic Curve DSA
+
+### Public key Infrastructure 
+This provides hybrid cryptography.
+It combines symmetric ans asymmetric encryption, hashing algorithms and digital signatures. 
+This enables communication between previous unknown parties. 
+
+Components of PKI 
+1. Digital certificates
+2. Certificate Authorities
+
+Digital Certificates 
+This is assurance that people we are communicating with are who they say they are. 
+A digital certificate os a verifies public key 
+They are governed under x.509 standard
+
+Contents of a digital signature
+1. The version of x.509
+2. Serial number
+3. Signature Algorithm identifier (the technique used by CA to sign the contents of the certificate
+4. Issuer name (The CA that issued the certificate)
+5. Validity period
+6. Subjects name (Common Name and distinguihed name of the entity owning the public key)
+7. The subjects public key
+
+What does a wildcard mean? 
+It indicates that the certificate is good for subdomains as well. 
+
+Certificate Authorities 
+Thisis the glue of the PKI 
+It is a notarization service for Digital signatures 
+Examples of CAs: Symantec, AWS, digicert. 
 
 
 ### Cryptographic systems and solutions
