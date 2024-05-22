@@ -335,10 +335,62 @@ What does a wildcard mean?
 It indicates that the certificate is good for subdomains as well. 
 
 Certificate Authorities 
-Thisis the glue of the PKI 
+The glue that binds PKI 
 It is a notarization service for Digital signatures 
 Examples of CAs: Symantec, AWS, digicert. 
 
+What is a Registration Authority?  These assist CA with the burden of veryfying identity before issuing digital certificates. This allows the CAs to remotely validate the useridentity 
+
+How do CAs protect their own private keys? 
+Using an offline CA to protect their root certificate. This is isolated from the network. The offline CA is used to creat subordinate online CAs used to issue certificates. 
+
+What is certificate chaining? 
+The use of a series of internediate CAs. The browser checks the certificate chain to verify the identity of intermediate CA and traces back to the root CA. 
+
+Can you have an Internal CA? 
+Yes. Multiple organisations have their own implementation of CAs internally. These certs are self signed. Internal systems must be configured to trust these self signed certificates. 
+
+Cert Lifecycle 
+
+1. Create/enroll
+2. Validate
+3. Revoke
+
+Creation
+1. Approach a CA with documents for enrollment
+2. Provide your public key to the CA. This is in the form of a cert signing request (CSR)
+3. CA creats an x.509 cert with identifying information  and copy of digital certs
+4. You are now free to circulate the cert.
+
+Types of certificates 
+Domain velidation certificate 
+Extended validation 
+
+Verification 
+What do you check when you receive a digital certificate 
+1. CA digital signature
+2. Validity period
+3. Ensure the cert was not revoked (CRL or OCSP)
+4. The cert contains the data you are trusting
+
+What is certificate pinning? 
+This instructs the browsers to attacj a cert to a subject for an extended period of time. When sites use cert pinning, the browser associates that site with their public key which allows users or admins to notice anf intervene if certificate unexpetedly changes 
+
+Revocation
+What are the reasons for revocation?
+1.The cert was compormised 
+2.The cert was erroneously issued
+3.Details on the cert changes e.g subjects name 
+4.The security association changed. 
+
+Revocation request grace period: Max time a CA will perform requested revocation
+
+Techniques to verify authenticity of certs 
+1. CRL
+2. OCSP
+3. Certificate Stapling
+
+   
 
 ### Cryptographic systems and solutions
 
