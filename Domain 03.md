@@ -477,17 +477,13 @@ What ius secure defaults? SD3+C - Where security products are digned with the em
 
 ### fail Securely 
 
-
-## Keep it simple
+### Keep it simple
 
 ### Zero Trust 
-
 
 ### Privacy by design
 
 ### Trust but Verify 
-
-
 
 ## Techniques for ensuring CIA 
 
