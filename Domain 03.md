@@ -21,7 +21,7 @@ Identifying, Categorising and analysing potential threats.
 
 Objective of Threat Modelling: To prioritize the potential threats against an organization's valuable assets.
 - Proactive approach: during design and development.  It is a defensive approach to threat modelling: takes place during initial design. Based on predicting threats and designing specific defenses during the coding and crafting process.
-- Reactive approach: once product is created and deployed. Takes care of the threats that could not be predicted during the design phase. It addresses unforeseen issues. This is known as thrat hunting or adversarial approach.
+- Reactive approach: once product is created and deployed. Takes care of the threats that could not be predicted during the design phase. It addresses unforeseen issues. This is known as threat hunting or adversarial approach.
 
 Microsoft SDLC goals in threat modelling 
 
@@ -34,9 +34,9 @@ Fuzz testing: dynamic testing technique that provides many different types of in
 **Identifying threats**
 How do we identify threats? 
 
-- Focus on Assets: Determine the value of assets bafore identifying the threats 
-- Focus on Attackers: Identify attackers and their motivations, goals, TTPs 
-- Focus on Software: This is specific to comapanies that develops software. 
+- Focus on Assets: Determine the value of assets before identifying the threats 
+- Focus on Attackers: Identify attackers and their motivations, goals, TTPs. 
+- Focus on Software: This is specific to companies that develops software. 
 
 Guides/References for Threat Modelling 
 
@@ -390,9 +390,110 @@ Techniques to verify authenticity of certs
 2. OCSP
 3. Certificate Stapling
 
+Certificate Formats 
+The formats can be either in binary or text format 
+
+1. Distingushed Encoding Rule (DER)- Binary - der,.crt,.cer
+2. Privacy Enhanced Mail (PEM) - Text - .pem, .crt
+3. Personal Information Exchange (PFX) -Binary - .pfx,.p12
+4. p7B - Text -.p7b
+
    
+### Hybrid Cryptography
+ = Symettric + Asymmetric 
+ Why do we need it? To exchange the ephemeral key using asymettric encryption. The data is exchanged using symettric algorithm
+ Example: TLS
 
-### Cryptographic systems and solutions
+ ## Applied Cryptography 
+ Portable devices : Disk encyption e.g bitlocker, Encrypting File System(EFS) , FileVaule encryption
+ Email: For confidentiality, encrypt. For integrity, hash. For authentication, integrity and nonrepudiation, digitally sign. For confidentiality, Integrity, origin authentication , encrypt and digitally sign 
+ PGP:Combines CA and Web of trust
+ S/MIME - Secure MultiPurpose Internet Mail xtensions. Used by MS, Apple and google.Relies on x.509 certificates
+ 
+ ## Web Applications - The use of SSL and TLS. 
+  SSL -insecure for use today
+  TLS - Secure communication. How? Relies on exchange of digital certs to negotiate the encrption/decryption parameters. Uses both symmetric and asymmetric encryption.
+  Explaining TLS
+  - When a user accesses the website, it retrieves the servers cert and extracts the servers public key
+  - Browser creates a random symmetric key using its own private key. The 2 systems use this key for all future communication.
+  - The server decrypts the symettric key using its own private key. 
 
-### cryptanalytic attacks
 
+Tor and Dark Web - tor was known as the onion router. 
+Stenography and Watermarking. Stenography is the art of using crypographic techniques to embed secret messages within another message. 
+
+## Networking 
+circuit Encryption - To protect data in motion. Link encrption(To protect the communication circuit) and end to end encyption(protects the communication between two parties e.g client and server. 
+IPSEC - It relies on AH and ESP. AH ensures integrity and nonrepudiation. ESP provides confidentiality and integrity 
+ Modes of IPSEC operation: 
+  Transport mode - for end to end encryption- ony the payload is encrypted 
+  Tunnel Mode - Entire packet including the header is encypted. 
+ Operation: At runtime, a security association is established. This records status and configuration of connection. Its simplex. For two way connection, 2 SAs are needed. If you want bidirectional channel using both AH and ESP, you will need to set up 4 SAs.
+
+ ### Applications 
+ 1. Blockchain
+ 2. Lightweight cryptography
+ 3. Homomorphic Encryption
+
+### Cryptographic Attacks 
+
+Analytic attack 
+Implementation attack 
+Statistical Attack 
+Brute Force attack 
+Fault Injection attack 
+Side-Channel Attack 
+Timing attack 
+Frequency analysis and ciphertext-Only attack 
+Known Plaintext attack 
+Chosen Plaintext 
+Chosen Ciphertext 
+Meet in the middle 
+Man in the middle
+
+
+### Chapter 8: Secure defaults, Fail securely, Keep it simple, Zero Trust, Privacy by design, Trust but verify, security models (e.g., Biba, Star Model, Bell-LaPadula), Select controls based upon systems security requirements, Understand security capabilities of Information Systems
+
+
+## Secure Design Principles 
+
+### Objects and Subjects 
+Subject? the active element that makes a request for a resource e.f user,process
+Object? This is the resource being accessed. A file, printer e.t.c
+
+Relationship between object and subject: Writing, reading, deleting, printing, copying , moving, backing up e.t c
+
+Transitive Trust: If A trusts B , and B trusts C, then A can trsut C. 
+Transitive trust is a serious security concern as it might cause bypassing of controls. 
+
+Closed and open systems 
+Closed: Same manufacturere, deigned to work in  a silo
+Opne: Based upon agreed upon standards, can be integrated, APIs 
+
+## Secure Defaults 
+"The tyranny of the defaults"
+Defaults are not particularly secure. Most manufacturere incorporate default settings to make the first time usage of the products less cumbersome.
+What ius secure defaults? SD3+C - Where security products are digned with the emost secure settings enabled by default.
+
+## fail Securely 
+
+
+## Keep it simple
+
+## Zero Trust 
+
+
+## Privacy by design
+
+## Trust but Verify 
+
+
+
+# Techniques for ensuring CIA 
+
+1. Confinement
+2. Bounds
+3. Isolation
+4. Access Controls
+5. Trust and Assurance
+6. 
