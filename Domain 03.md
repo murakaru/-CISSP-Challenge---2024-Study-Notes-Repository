@@ -404,7 +404,7 @@ The formats can be either in binary or text format
  Why do we need it? To exchange the ephemeral key using asymettric encryption. The data is exchanged using symettric algorithm
  Example: TLS
 
- ## Applied Cryptography 
+ ### Applied Cryptography 
  Portable devices : Disk encyption e.g bitlocker, Encrypting File System(EFS) , FileVaule encryption
  Email: For confidentiality, encrypt. For integrity, hash. For authentication, integrity and nonrepudiation, digitally sign. For confidentiality, Integrity, origin authentication , encrypt and digitally sign 
  PGP:Combines CA and Web of trust
@@ -470,26 +470,26 @@ Closed and open systems
 Closed: Same manufacturere, deigned to work in  a silo
 Opne: Based upon agreed upon standards, can be integrated, APIs 
 
-## Secure Defaults 
+### Secure Defaults 
 "The tyranny of the defaults"
 Defaults are not particularly secure. Most manufacturere incorporate default settings to make the first time usage of the products less cumbersome.
 What ius secure defaults? SD3+C - Where security products are digned with the emost secure settings enabled by default.
 
-## fail Securely 
+### fail Securely 
 
 
 ## Keep it simple
 
-## Zero Trust 
+### Zero Trust 
 
 
-## Privacy by design
+### Privacy by design
 
-## Trust but Verify 
+### Trust but Verify 
 
 
 
-# Techniques for ensuring CIA 
+## Techniques for ensuring CIA 
 
 1. Confinement
 2. Bounds
