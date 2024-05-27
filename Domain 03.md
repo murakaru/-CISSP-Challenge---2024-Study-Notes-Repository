@@ -452,8 +452,7 @@ Meet in the middle
 Man in the middle
 
 
-### Chapter 8: Secure defaults, Fail securely, Keep it simple, Zero Trust, Privacy by design, Trust but verify, security models (e.g., Biba, Star Model, Bell-LaPadula), Select controls based upon systems security requirements, Understand security capabilities of Information Systems
-
+### Chapter 8: 
 
 ## Secure Design Principles 
 
@@ -476,20 +475,79 @@ Defaults are not particularly secure. Most manufacturere incorporate default set
 What ius secure defaults? SD3+C - Where security products are digned with the emost secure settings enabled by default.
 
 ### fail Securely 
+To fail securely, design to ancipate and defend against errors. Error handling mechanisms e.g try..catch, conditional statements(if ..then), Input sanitization, input filtering or input validation. This prioritises the physical security of the assets. This is a synonym to fail closed
+
+#### fail soft: 
+To allow a system to continue operation after component failure.
+#### fail safe:
+This proritises the human aspect . When a failure occurs the system fails in a manner that prioritises the health and safety of people. 
+
+#### Fail open
+This protects the availability of a system incase it fails. Protects people 
+#### Fail close
+This protects the integrity and confidentiality of the system. Protects Assests
+
 
 ### Keep it simple
 
+Concepts of KISS
+- DRY (Do Repeat Yourself)
+- Computing minimalism - code should use the least necesary haardware and software
+- Rule of Least power - use the least powerful programming language
+- Worse if better - Quality of SW does not increase with the increase in capabilities and functions
+- You arent going to need it - Do not add functionalitties of not needed.
+  
 ### Zero Trust 
 
+- Nothing is automatically trusted.
+- Concept of never trust, always verify
+- This is build arounf the concept of assume breach - always assume that a security breach has occurred.
+- Every access request must be authenticated, authorised and encryped before access of granted.
+- Zero Trust relies on internal microsegmentation and adherence to principles of least priviledge. These principles prevent lateral movement so that in the event of a breach, the ability to move laterally is impedded.
+- How do we implement zero trust? there is a wide range of solutions to implement zero trust
+   1. Internal segmentation Firewalls
+   2. MFA
+   3. IAM
+   4. NG endpoint security
+  Zero trust is forwamlised in NIST SP 800-207 
 ### Privacy by design
+Integrates privacy design concepts during yhe design phase
+Same concept as secure by design
+- Proactive and not reactive
+- Privacy by default
+- privacy in design
+- end to end security
+- Visibility and transparency
+- Respect for user privacy
 
 ### Trust but Verify 
+The traditional approach of trusting subjects and devices within the companies sec perimeter. This increases vulnerability 
 
 ## Techniques for ensuring CIA 
 
-1. Confinement
-2. Bounds
-3. Isolation
-4. Access Controls
-5. Trust and Assurance
-6. 
+1. Confinement - Used to restrict actions of a program. Process confinement allows a process to read from and write to only certain memory locations. This is sandboxing. The goal is prevent data leakage. confinement can be implemented in the Operating system itself or service. 
+2. Bounds - These are the limits within which it can access memory and resources. The areas within which a process is confined or contained. Physical bounds are more secure but very expensive. 
+3. Isolation - This ensures that any behaviour will affect the memory and resources associated with that process.This protects the OS environment and kernel. Prevents an application from accessing the memory and resources of other applications
+4. Access Controls - Only allows authorised subjects to access objects
+5. Trust and Assurance - Trusted system ensures that the protection mechanisms to process sensitive data. Assuarnce is the degree of confidence (How reliable the system is)
+
+## Security Models 
+
+- Trusted Computing base
+- State Machine Model
+- Information Flow Model
+- Noninterference model
+- Take-grant model
+- Access Control model
+- Bell Lapadula Model
+- Biba Model
+- Clark -Wilson Model
+- Brewer and Nash Model
+- Goguen Meseguer model
+- Sutherland Model
+- Graham-Denning model
+- Harrison-Ruzzo-Ullman model
+
+
+
+
