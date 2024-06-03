@@ -50,7 +50,7 @@ Guides/References for Threat Modelling
 
 **Pasta: Process of Attack, simulation and Threat Analysis**
 
-7 stage threat modelling methoodology 
+7 stage threat modelling methodology 
 Risk centric approach
 
 ![image](https://user-images.githubusercontent.com/19290577/216446694-4138c814-4df3-48b2-8ce4-d112f7861d7f.png)
@@ -483,35 +483,44 @@ To allow a system to continue operation after component failure.
 This proritises the human aspect . When a failure occurs the system fails in a manner that prioritises the health and safety of people. 
 
 #### Fail open
-This protects the availability of a system incase it fails. Protects people 
+This protects the availability of a system incase it fails. Protects people. 
 #### Fail close
 This protects the integrity and confidentiality of the system. Protects Assests
 
+Summary: 
+Fail open ensures availability of the systems during system failure.
+Fail Safe, Fail closed and Fail secure ensure Confidentiality and Integrity during system failure.
+Fail open and fail safe aims to protects people during system failure 
+Fail closed and fail secure aims to protect assets during system failure. 
 
 ### Keep it simple
 
+What is KISS? A recommendation to build systems that are less complicated.
+
 Concepts of KISS
-- DRY (Do Repeat Yourself)
-- Computing minimalism - code should use the least necesary haardware and software
-- Rule of Least power - use the least powerful programming language
-- Worse if better - Quality of SW does not increase with the increase in capabilities and functions
-- You arent going to need it - Do not add functionalitties of not needed.
+- DRY (Do Repeat Yourself) - Imperative for change management. Makes it less difficult to change. 
+- Computing minimalism - code should use the least necesary hardware and software.
+- Rule of Least power - use the least powerful programming language.
+- Worse if better - Quality of SW does not increase with the increase in capabilities and functions. Few dunctions in code are more secure. 
+- You arent going to need it - Do not add functionalities if not needed.
   
 ### Zero Trust 
 
 - Nothing is automatically trusted.
 - Concept of never trust, always verify
-- This is build arounf the concept of assume breach - always assume that a security breach has occurred.
+- This is build around the concept of assuming breach - always assume that a security breach has occurred.
 - Every access request must be authenticated, authorised and encryped before access of granted.
-- Zero Trust relies on internal microsegmentation and adherence to principles of least priviledge. These principles prevent lateral movement so that in the event of a breach, the ability to move laterally is impedded.
+- Zero Trust relies on internal microsegmentation and adherence to principles of least priviledge.
+- These principles prevent lateral movement so that in the event of a breach, the ability to move laterally is impedded.
 - How do we implement zero trust? there is a wide range of solutions to implement zero trust
-   1. Internal segmentation Firewalls
+   1. Internal segmentation Firewalls(ISFWs)
    2. MFA
    3. IAM
    4. NG endpoint security
-  Zero trust is forwamlised in NIST SP 800-207 
+ Zero trust is formalised in NIST SP 800-207
+
 ### Privacy by design
-Integrates privacy design concepts during yhe design phase
+Integrates privacy design concepts during the design phase. Focus is prevention rather than remedy.
 Same concept as secure by design
 - Proactive and not reactive
 - Privacy by default
@@ -521,22 +530,51 @@ Same concept as secure by design
 - Respect for user privacy
 
 ### Trust but Verify 
-The traditional approach of trusting subjects and devices within the companies sec perimeter. This increases vulnerability 
+The traditional approach of trusting subjects and devices within the companies sec perimeter. This increases vulnerability. 
+It is no longer sufficient in the meodern world due to the changing threat landscape. 
 
 ## Techniques for ensuring CIA 
 
-1. Confinement - Used to restrict actions of a program. Process confinement allows a process to read from and write to only certain memory locations. This is sandboxing. The goal is prevent data leakage. confinement can be implemented in the Operating system itself or service. 
-2. Bounds - These are the limits within which it can access memory and resources. The areas within which a process is confined or contained. Physical bounds are more secure but very expensive. 
-3. Isolation - This ensures that any behaviour will affect the memory and resources associated with that process.This protects the OS environment and kernel. Prevents an application from accessing the memory and resources of other applications
-4. Access Controls - Only allows authorised subjects to access objects
-5. Trust and Assurance - Trusted system ensures that the protection mechanisms to process sensitive data. Assuarnce is the degree of confidence (How reliable the system is)
+1. Confinement - Used to restrict actions of a program.
+   Process confinement allows a process to read from and write to only certain memory locations.
+   This is sandboxing.
+   The goal is prevent data leakage.
+   Confinement can be implemented in the Operating system itself or service.
+   
+2. Bounds - These are the limits within which it can access memory and resources.
+   The areas within which a process is confined or contained.
+   Physical bounds are more secure but very expensive.
+    
+3. Isolation - Depends on confinement and bounds.
+   This ensures that any behaviour will affect the memory and resources associated with that process.
+   This protects the OS environment and kernel. Prevents an application from accessing the memory and resources of other applications.
+   
+4. Access Controls - Only allows authorised subjects to access objects.
+   Options for Access conteols - discretionary, role-base and mandatory.
+   
+6. Trust and Assurance - Trust is the presence of security mechanisms
+   Assuarance is the degree of confidence (How reliable the system is). Assurance must be established on individual systems.
+   If there is a change on a system, an assessment needs to be conducted based on   real world usage of the system with an aim to guarantee assurance.
 
 ## Security Models 
 
 - Trusted Computing base
+  Combination of H/W, S/W and controls that work together. It is the only portion of the system that can be trusted to adhere and enforce security policies.
+    Sec Perimeter: Logical boundary separating the TCB from the rest of the system to ensure that there is no inseure comm between TCB and other elements of the computer system.Trusted paths are used to communicate between TCB and other parts of the system.
+    Ref Monitors - This sits between every subject and object. Collection of components in the TCB that work together to impelement the ref monitor is the sec kernel. The sec kernel will mediate all the requests that match the access rules for the system.
+  
 - State Machine Model
+  This describes a system that is always secure no matter the state its in.
+  What is a state? This is a snapshot of the system at a specific point in time. When there is a transition(moment an input is translated into an output) then the state changes. A secure machine will always boot into a secure state
+  
 - Information Flow Model
+  This focuses on information  flow.
+  This prevents unauthorised, insecure flows between systems (diff levels of systems.
+  Information flow model allows all tge authorised flows while preventing unauthorsied flows
+  
 - Noninterference model
+
+
 - Take-grant model
 - Access Control model
 - Bell Lapadula Model
