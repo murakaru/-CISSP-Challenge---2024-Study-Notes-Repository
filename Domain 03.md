@@ -12,8 +12,6 @@ With reference to the official guide, Domain 1 contains the below chapter and co
 - Chapter 20: Database systems
 
 
-
-
 ## Chapter 1: 
 ### Threat Modelling 
 
@@ -572,19 +570,125 @@ It is no longer sufficient in the meodern world due to the changing threat lands
   This prevents unauthorised, insecure flows between systems (diff levels of systems.
   Information flow model allows all tge authorised flows while preventing unauthorsied flows
   
-- Noninterference model
+- Noninterference model: Based on the impact that a subject with a higher security level affects the system state of actions of a subject with a lower security level.
+  The actions of higher sec level subject should not affect the lower sec level subject.
+  If this is not observed, it might lead to information leakage and create covert channels. 
 
+- Take-grant model: This dictates how rights can be passed form one subject to another or from subject to object.
+  There are four rules in the take-grant model
+  Take rule: Allows a subject to take rights over an object
+  Grant rule: Allows a subject to grant rights to an object
+  Create rule: Allows a subject to create new rights
+  Remove rule: Allows a subject to remove rights it has.  
+  
+- Access Control model: A table of subjects and objects thet indicates the actions the eash subject can perform. 
+- Bell Lapadula Model: Born in the 70s. Focus on Confidentiality.
+  A subject with any level of clearance can access all the objects at or below their clearance level.
+  However, for their clearance level, access is compartmentalised and rights issued on a need to know basis.
 
-- Take-grant model
-- Access Control model
-- Bell Lapadula Model
-- Biba Model
+  Build on state machine model concept
+  - Simple security Property - No read up
+  - The Star Security property - No write down
+  - The dicretionary security property - System uses an access matrix to enforce discretionaty access control.
+ 
+    Not supported today for file sharing and networking
+    
+- Biba Model: Focuses on Integrity 
+  Designed after bell la padula
+  Build on the state machine concept.
+  Based on the information flow and is a multilevel model.
+  - Simple integrity property - no read down
+  - Star - No write up.
+ 
+   So why no read down? For integrity. You do not want unvalidated data to read validated documents due to potentoial data contamination.
+  Biba is designed to
+  1. Prevent object modifivation bu unauthorised subjects
+  2. Prevent unauthorised modification of objects by authorised subjects
+  3. Protect internal and external objects consistency.
+ 
+  A classification level is required for the Biba Model.
+  
+  Disadvantages of Biba
+  
+ - Only addresses integrity - not confidentiality of Availability
+ - Focus on protectong assets from external threats, assumming that internal threats are handled programmatically.
+ - Does not address access control management.
+ - Does not prevent copvert channels. 
+  
 - Clark -Wilson Model
-- Brewer and Nash Model
-- Goguen Meseguer model
-- Sutherland Model
-- Graham-Denning model
-- Harrison-Ruzzo-Ullman model
+
+ Focuses on data Integrity 
+ Does not rely on the state machine concept 
+ It defines a data item and allows modfication through an interface(a program or application)
+ An object can only be accessed through a program or interface 
+
+ Items defined under this model 
+ 1. CDI : Constrained Data Item - A data item whose integrity is protected by the security model
+ 2. UDI: Inconstrained Data Item - A data item that is not constrained by the security model. Data that is not validated would be considered unconstrained.
+ 3. IVP: Integrity Verification Procedure - A procedure that scans data items and confirms their integrity.
+ 4. TPs - Transformation Procedures - These are the only procedures allowed to modify a CCDI.
+
+This model used security labels to grant access to objects 
+
+ 
+- Brewer and Nash Model: This was created to allow access control to change dynamically based on the users activity. (A kind of state machine concept)
+  Defines the security domains that are potentially in conflict and prevents a subject with access to one domain that belongs to a specific conflic class from accessing any other domain that belongs to the same conflict class.
+  This used the prociple of data isolation.
+  Called the chinese wall model/ethicall wall/cone of silence
+  
+- Goguen Meseguer model:  An integrity model
+  Foundation of the non interference model
+  Based on determining a set or domain that a subject can access.
+  Subjects are only allowed to perform operations on predetermined objects
+  When similar users are grouoed into a domain, the members of one subject domain cannot interfere with the members of another subject domain
+  
+- Sutherland Model: An integrity model
+  Based on the state machine concept and the information flow model.
+  This model focuses on defining a set of syetsm states, intitial states and transitions.
+  Through the use of predetermined states, integrity of maintained and interference is prohibited.
+  
+- Graham-Denning model: Focus on secure creation and deletion od subjects and objects
+    It is a cobination of
+
+  - Securely creating an object
+  - Securely create a subject
+  - Securely delete an object
+  - Securely delete an object
+  - securely provide read access right
+  - Securely provide grant access right
+  - Securely provide the delete access right
+  - Securely provide the delete grant access
+  - Securely provide the transfer access right
+ 
+    It uses an access control matric to specify permissions
+    
+- Harrison-Ruzzo-Ullman model:Focus on assignment of object access rights to subjects as well as the resilience of those assigned rights. Its an extention of Graham-Denning model.
+  A set of procedures to edit/alter access rights of a subject over an object.
+  There are also integrity rules e.g
+   .Inorder to create, add a subject of object to the matrix, it must not already exist
+   .In order to remove a subject or object from a mtrix, it must already exist
+   .If several commands are performed at once, they must all be successfull, else, none of the commands will be executed.
+
+
+  ### Selecting Controls based in system Sec requirements
+
+  #### Common Criteria
+  #### Authorisation to Operate
+
+  ### Understand security Capabilities of Information Systems
+
+  #### Memory Protection
+  #### Virtualisation
+  #### Trsued Platform Module
+  #### Interfaces
+  #### Fault Tolerance
+  Ability for the system to suffer a fault but continue operating. How?Using RAID array, employing additional servers in a failover clustered configuration, avoiding SPOF and implementing redundancy. 
+  #### Encryption
+  Converting plaintect to cyphertect. protects confidentiality and integrity 
+
+
+## Chapter 9:
+  
 
 
 
