@@ -6,10 +6,6 @@ With reference to the official guide, Domain 1 contains the below chapter and co
 - Chapter 1: Threat Modeling, Defense in Depth
 - Chapter 7: Cryptographic systems and solutions, cryptanalytic attacks
 - Chapter 8: Secure defaults, Fail securely, Keep it simple, Zero Trust, Privacy by design, Trust but verify, security models (e.g., Biba, Star Model, Bell-LaPadula), Select controls based upon systems security requirements, Understand security capabilities of Information Systems
-- Chapter 9: Shared responsibility, Client-based systems, Server-based systems, Industrial Control Systems (ICS), Distributed systems, Internet of Things (IoT), Microservices, Containerization, Serverless, Embedded systems, High-Performance Computing (HPC) systems, Edge computing systems, Virtualized systems, 
-- Chapter 10: Design site and facility security controls, Apply security principles to site and facility design
-- Chapter 16: Least Privilege, Separation of duties (SoD), Cloud-based systems (e.g., Software as a Service (SaaS), Infrastructure as a Service (IaaS), Platform as a Service (PaaS))
-- Chapter 20: Database systems
 
 
 ## Chapter 1: 
