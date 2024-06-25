@@ -470,9 +470,115 @@ How to create and enforce personnel sec policies in the workplace
 
 **Laws**
 
-Categories
-State privacy 
-##Legal and regulatory issues 
+Categories of laws
+
+1. Criminal laws
+2. Civil laws
+3. Administrative laws
+
+Laws 
+1. computer crime 
+2. Computer Fraud and Abuse act 
+3. CFAA amendments 
+4. National Information Infrastructure Protection Act of 1996 
+
+Federal Sentensing Guideline 
+
+Federal Information Security Management Act 
+
+Federal Cybersecurity Laws of 2014 
+
+
+Intellectual Property (IP)
+
+Copyright and digital Millenium Copyright Act 
+
+
+Trademarks 
+Patents 
+Trade secrets 
+Licensing 
+Import /Export 
+Countries of concern 
+Encryption Export Contreols 
+
+Privacy 
+
+US Privacy Law 
+  Fourth Amendment 
+  Privacy act of a974 
+  Electronic communications Provacy Act 
+  Communicationns Assistance for Law enforcement Act 
+  Economic espionage Act of 1996 
+  Health Insurance portability and Accountability Act of 1996 
+  Health Information Technology for economic and Clinical Health Act of 2009 
+  Childrens online privacy protection Act of 1998 
+  Gramm-Leach-Bliley Act of 1999 
+  USA patriot Act of 2001
+  Family Educational Rights and Privacy Act 
+  Identity Theft and Assumption Detterence Act 
+
+  European Union Privacy Law 
+  European Union Data Protection Directive (DPD)
+  European Union general data protection Regulation 
+  Cross border Infromation sahring 
+
+# Canadian Privacy Law 
+Impacts canadian residents 
+PIPEDA - Personall Infor Protection and Electronic Documents Act - Restricts the collection, use and disclosure of personal information.
+Provisions under PIPEDA 
+1. Race, nationality and ethinicity
+2. religion
+3. Age
+4. Marital status
+5. Medical, education and employment history
+6. Financial information
+7. DNA
+8. Identifying numbers
+9. Employee performance records
+
+So what is excluded?
+1. Infor that is not about an individual
+2. Infor about a business
+3. Infor that is rendered anonymous - as long as you cant link the infor to someone
+4. Infor about public servants
+5. Business contact infor collected for purposes of employment, business or profession.
+
+PIPEDA may be superseded by province -specific laws. These exists in Alberta, British colombia and Quebec 
+
+  
+# State privacy Laws
+These are passed by the state, provinces and other jurisdictions 
+E.g California Consumer privacy Act - This is modelled after GDPR.
+It provides the below
+1. Right to know the infor that businesses are collecting
+2. Right to be forgotten
+3. Right to opt of of sale of information
+4. Right to exercise privacy rights without discrimination
+   
+# Compliance 
+
+PCI DSS 
+
+The PCI DSS requirements 
+1. Install FW to protect cardholder data
+2. Do nopt use vendor supplied defaults e.g system passwords
+3. Protect the stored cardholder data
+4. Encrypt the transmission of card holder data
+5. Protect all systems against Malware
+6. Have secure systems and apps
+7. Restrci access to - need to know
+8. Identify and authenticate access to systems
+9. restrict physical access to the data
+10. Track and monitor all access
+11. Maintain a policy that addresses infor sec for all.
+
+
+## Contracting and Procurement
+
+
+
+
 
 
 # Chapter 19 
