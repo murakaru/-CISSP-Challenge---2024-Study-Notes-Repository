@@ -9,28 +9,32 @@ Chapter 11
 What is a protocol? Set of rules that define communication and how data is transmitted over a medium
 What is OSI model?
 It is an abstract or theoretical model that establishes a communication standard for all computer systems.
-What are the layer of the OSI model? Application, persentation, session, transport, network,data link, physical 
+What are the layers of the OSI model? Application, presentation, session, transport, network,data link, physical
+
 Explain the encapsulation and deencapsulation process
-Encapsulation is addirtion of header and footers to tehe data received from the top layer( application to physical)
-Deencapsulation : The stripping away of the headers and footers form the data untir (from physical to application) 
+Encapsulation is addirtion of header and footers to the data received from the top layer( application to physical)
+Deencapsulation : The stripping away of the headers and footers frm the data (from physical to application) 
 
 
-Explain: Application layer receives data from the SW, It encapsulates this data by adding a header.This contrinues until the 
-physcial layer. The phsysical layer converts the meaasge into a stream of bits 0 and 1s for transmission over the physical medium.
+Explaination: Application layer receives data from the SW, It encapsulates this data by adding a header.This continues until the 
+physcial layer. The physical layer converts the mesasage into a stream of bits 0 and 1s for transmission over the physical medium.
 The receiving computer captures the bits from the physical medium and restructures the message. 
-It sends this to data link layer...and up the layers - This is the deencapsulation process,.When it reaches the app layer, it is sent to the intended SW recepient 
+It sends this to data the link layer...and up the layers - This is the deencapsulation process,.When it reaches the app layer, it is sent to the intended SW recepient 
 
 PDU : Protocol Data unit - the data sent across the layers
-Transport layer - segnent 
+
+Data units across the various layers of the OSI model
+
+Transport layer - segment 
 Network layer - Packet 
 DL layer - Frame 
-Physcoal - Bits 
+Physcical - Bits 
 
 Application layer 
 The interface between the SW and the Stack. The SW application is not located here..we have the protocols and services required to interface 
 with the application.
 
-Presntation layer 
+Presentation layer 
 Responsible for encyption and decryption
 
 Where can encryption occurr in network communication? 
