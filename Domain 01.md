@@ -251,8 +251,6 @@ Nb/ Note the difference between 27001 and 27002 for the CISSP exam
 
   This creates a flexible standard that sets expections for problem solving and cjhange management teams. It ensures that the organization is safe from security risks 
   
-
-
 **NIST RMF**
 
 - NIST 800-53 Rev. 5
@@ -294,11 +292,11 @@ Profiles
 The CSF profiles are pre-made templates of the NIST CSF that are developed by a team of industry experts. CSF profiles are tailored to address the specific risks of an organization or industry. They are used to help organizations develop a baseline for their cybersecurity plans, or as a way of comparing their current cybersecurity posture to a specific industry standard.
 
 
-identify - What  risks pose a threat in my environment?
-protect - What stategy can i use to protect the org? 
-detect - Identifying the actual incidents and improve monitoring to improve detection
-respond - Ensuring that proper procedures are used to contain, neutralise and analyse security incidents. 
-recover - Returing the affected systems to normal operation
+* identify - What  risks pose a threat in my environment?
+* protect - What stategy can i use to protect the org? 
+* detect - Identifying the actual incidents and improve monitoring to improve detection
+* respond - Ensuring that proper procedures are used to contain, neutralise and analyse security incidents. 
+* recover - Returing the affected systems to normal operation
 
 Implementing the CSF
 In any scenario, the U.S. Cybersecurity and Infrastructure Security Agency (CISA) provides detailed guidance that any organization can use to implement the CSF. This is a quick overview and summary of their recommendations:
@@ -310,7 +308,6 @@ Perform a risk assessment to identify which of your current operations are meeti
 Analyze and prioritize existing gaps in security operations that place the businesses assets at risk.
 
 Implement a plan of action to achieve your organization’s goals and objectives.
-
 
 
 OWASP security Principles
@@ -389,8 +386,6 @@ Here is a breakdown of the Stride model - definitions + Security controls
 PASTA is the Process for Attack Simulation and Threat Analysis. 
 PASTA threat modelling combines an attacker perspective of a business with risk and impact analysis to create a complete picture of the threats to products and applications, their vulnerability to attack, and informing decisions about risk and priorities for fixes.
 
-
-
 **VAST**
 
 Visual, Agile, and Simple Threat (VAST) 
@@ -425,48 +420,98 @@ Definition: Supply chain risk management (SCRM) is the means to ensure that all 
 The goal of a secure supply chain is to ensure that the finished product is of sufficient quality, meets performance and operational goals, and provides stated security mechanisms, and that at no point in the process was any element counterfeited or subjected to unauthorized or malicious manipulation or sabotage. 
 
 
-
-
 # Chapter 2 
 
 ## Personnel Sec Policies  
 
 How to create and enforce personnel sec policies in the workplace 
 
-
 ## Risk Management concepts
 
 **Threats vs Vulnerabilities**
+* Threats: any potential occurrence that many cause an undersirable or unwanted outome for a specific asset; they can be intentional or accidental; loosely think of a threat as a weapon that could cause harm to a target
+* Vulnerability: the weakness in an asset, or weakness (or absense) of a safeguard or countermeasure; a flaw, limitation, error, frailty, or susceptibility to harm
+  
+
+- Exposure is risk, and risk is mitigated by safeguards
+Safeguards protect assets that are endangered by threats
+- Threat Agent/Actors: intentionally exploit vulnerabilities
+- Threat Events: accidential occurrences and intentinoal exploitations of vulnerabilities
+- Threat Vectors: (AKA attack vector) is the path or means by which an attack or attacker can gain access to a target in order to cause harm
+  
+- Exposure: being susceptible to asset loss because of a threat; the potential for harm to occur
+- Exposure Factor (EF): derived from this concept; an element of quantitative risk analysis that represents the percentage of loss than org would experience if a specific asset were violated by a realized risk
+- Single Loss Expectancy (SLE): an element of quantitative risk analysis that represents the cost associated with a single realized risk against a specific asset; SLE = asset value (AV) * exposure factor (EF)
+- Annualized rate of occurrence (ARO): an element of quantitative risk analysis that represent the expected frequency with which a specific threat or risk will occur within a single year
+- Annualized loss expectancy (ALE): an element of quantitative risk analysis that represent the possible yearly cost of all instances of a specific realized threat against a specific asset; ALE = SLE * ARO
+Safeguard evaluation: ALE for an asset if a safeguard is implemented; ALE before safeguard - ALE with safeguard - annual cost of safeguard, or (ALE1 - ALE2) - ACS
+Risk: the possiblity or likelihood that a threat will exploit a vulnerability to cause harm to an asset and the severity of damage that could result; the > the potential harm, the > the risk
+
 **Risk assessment/analysis**
+
+used to identify the risks and set criticality priorities, and then risk response is used to determine the best defense for each identified risk
+Risk is threat with a vulnerability
+Risk = threat * vulnerability (or probability of harm multiplied by severity of harm)
+Addressing either the threat or threat agent or vulnerability directly results in a reduction of risk (known as threat mitigation)
+
 **Risk response**
-**Countermeasure selection and implementation**
-**Types of controls**
-**security and privacy**
-**Risk frameworks**
 
-
-
-
-
-## Security awareness and training 
-
-**How do we create awareness and training?**
-**Content reviews** 
-**Measuring Program Effectiveness**
-
-
-
+the formulation of a plan for each identified risk; for a given risk, you have a choice for a possible risk response:
+* Risk Mitigation: reducing risk, or risk mitigation, is the implementation of safeguards, security controls, and countermeasures to reduce and/or eliminate vulnerabilities or block threats
+* Risk Assignment: assigning or transferring risk is the placement of the responsibility of loss due to a risk onto another entity or organization; AKA assignment of risk and transference of risk
+* Risk Deterrence: deterrence is the process of implementing deterrents for would-be violators of security and policy 
+e.g. implementing auditing, security cameras, and warning banners; using security guards
+* Risk Avoidance: determining that the impact or likelihood of a specific risk is too great to be offset by potential benefits, and not performing a particular business function due to that determiniation; the process of selecting alternate options or activities that have less associated risk than the default, common, expedient, or cheap option
+* Risk Acceptance: the result after a cost/benefit analysis determines that countermeasure costs would outweigh the possible cost of loss due to a risk
+also means that management has agreed to accept the consequences/loss if the risk is realized
+* Risk Rejection: an unacceptable possible response to risk is to reject risk or ignore risk; denying that risk exists and hoping that it will never be realized are not valid prudent due care/due diligence responses to risk
+* Risk Transference: paying an external party to accept the financial impact of a given risk
+  
+Inherent Risk: the level of natural, native, or default risk that exists in an environment, system, or product prior to any risk management efforts being performed (AKA initial or starting risk); this is the risk identified by the risk assessment process
+Residual Risk: consists of threats to specific assets against which management chooses not to implement (the risk that management has chosen to accept rather than mitigate); risk remaining after security controls have been put in place
+Total Risk: the amount of risk an org would face if no safeguards were implemented
+Conceptual Total Risk Formula: threats * vulnerabilities * asset value = total risk
+Controls Gap: amount of risk that is reduced by implementing safeguards, or the difference between total risk and residual risk
+Conceptual Residual Risk Formula: total risk - controls gap = residual risk
+Risk should be reassessed on a periodic basis to maintain reasonable security because security changes over time
 
 # Chapter 3 
 ## BCP 
+This nvolves assessing the risk to organizational processes and creating policies, plans, and procedures to minimize the impact those risks might have on the organization if they were to occur
+
+BCP is used to maintain the continuous operation of a business in the event of an emergency, with a goal to implement a combination of policies, procedures, and processes
+BCP has four distinct phases:
+* project scope and planning
+* business impact analysis
+* continuity planning
+* approval and implementation
+  
+Business continuity requires a lot of planning and preparation; actual implementation of business continuity processes occur quite infrequently
+The primary facets of business continuity are:
+
+* Resilience: (e.g. within a data center and between sites or data centers)
+* Recovery: if a service becomes unavailable, you need to recover it as soon as possible
+* Contingency: a last resort in case resilience and recovery prove ineffective
 
 **Business continuity**
 
 **Project Scope and planning**
-**Project Continuity**
+Developing the project scope and plan starts with gaining support of the management team, making a business case (cost/benefit analysis, regulatory or compliance reasons etc.) and gaining approval to move forward.
+Next, you need to form a team with representatives from the business as well as IT
+Next, start with a business continuity policy statement, then conduct a business impact analysis (see next item), and then develop the remaining components:
+
+*preventive controls
+*relocation
+*the actual coninuity plan
+*testing
+*training and maintenance
 
 # Chapter 4 
 ## Compliance
+
+The act of confirming or adhering to rules, policies, regulations, standards, or requirements
+on a personnel level, compliance is related to individual employees following company policies and procedures
+employees need to be trained on company standards as defined in the security policy and remain in compliance with any contractual obligations (e.g. with PCI DSS)
 
 **Laws**
 
@@ -476,21 +521,16 @@ Categories of laws
 2. Civil laws
 3. Administrative laws
 
-Laws 
+##### Laws 
 1. computer crime 
 2. Computer Fraud and Abuse act 
 3. CFAA amendments 
 4. National Information Infrastructure Protection Act of 1996 
 
 Federal Sentensing Guideline 
-
 Federal Information Security Management Act 
-
 Federal Cybersecurity Laws of 2014 
-
-
 Intellectual Property (IP)
-
 Copyright and digital Millenium Copyright Act 
 
 
@@ -502,7 +542,7 @@ Import /Export
 Countries of concern 
 Encryption Export Contreols 
 
-Privacy 
+###### Privacy 
 
 US Privacy Law 
   Fourth Amendment 
@@ -523,7 +563,7 @@ US Privacy Law
   European Union general data protection Regulation 
   Cross border Infromation sahring 
 
-# Canadian Privacy Law 
+#### Canadian Privacy Law 
 Impacts canadian residents 
 PIPEDA - Personall Infor Protection and Electronic Documents Act - Restricts the collection, use and disclosure of personal information.
 Provisions under PIPEDA 
@@ -547,7 +587,7 @@ So what is excluded?
 PIPEDA may be superseded by province -specific laws. These exists in Alberta, British colombia and Quebec 
 
   
-# State privacy Laws
+#### State privacy Laws
 These are passed by the state, provinces and other jurisdictions 
 E.g California Consumer privacy Act - This is modelled after GDPR.
 It provides the below
@@ -556,9 +596,9 @@ It provides the below
 3. Right to opt of of sale of information
 4. Right to exercise privacy rights without discrimination
    
-# Compliance 
+#### Compliance 
 
-PCI DSS 
+* PCI DSS 
 
 The PCI DSS requirements 
 1. Install FW to protect cardholder data
@@ -572,14 +612,6 @@ The PCI DSS requirements
 9. restrict physical access to the data
 10. Track and monitor all access
 11. Maintain a policy that addresses infor sec for all.
-
-
-## Contracting and Procurement
-
-
-
-
-
 
 # Chapter 19 
 
