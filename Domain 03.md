@@ -694,34 +694,34 @@ This model used security labels to grant access to objects
 - Chapter 20: Database systems
 
 
-### Shared Responsibility
-### Client-based Systems 
-### Server-based Systems 
-### Industrial Control Systems (ICS) 
-### Distributed systems 
-### Internet of Things (IoT) 
-### Microservices, Containerization
-### Serverless 
-### Embedded systems 
-### High-Performance Computing (HPC) systems 
-### Edge computing systems 
-### Virtualized systems
+#### Shared Responsibility
+#### Client-based Systems 
+#### Server-based Systems 
+#### Industrial Control Systems (ICS) 
+#### Distributed systems 
+#### Internet of Things (IoT) 
+#### Microservices, Containerization
+#### Serverless 
+#### Embedded systems 
+#### High-Performance Computing (HPC) systems 
+#### Edge computing systems 
+#### Virtualized systems
 
 
 - Chapter 10: 
-### Design site and facility security controls, 
-### Apply security principles to site and facility design
+#### Design site and facility security controls, 
+#### Apply security principles to site and facility design
 
 ## Chapter 16: 
 
-### Least Privilege, 
-### Separation of duties (SoD), 
-### Cloud-based systems (e.g., Software as a Service (SaaS), 
-### Infrastructure as a Service (IaaS), 
-### Platform as a Service (PaaS))
+#### Least Privilege, 
+#### Separation of duties (SoD), 
+#### Cloud-based systems (e.g., Software as a Service (SaaS), 
+#### Infrastructure as a Service (IaaS), 
+#### Platform as a Service (PaaS))
 
 ## Chapter 20: 
-### Database systems
+#### Database systems
 
 
 
