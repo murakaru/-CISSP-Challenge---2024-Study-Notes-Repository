@@ -1,10 +1,10 @@
-Communication and Network Securtiy 
+# Communication and Network Securtiy 
 
 
 Chapter 11: Secure Network Architecture and components 
 Chapter 12: 
 
-Chapter 11
+## Chapter 11
 
 What is a protocol? Set of rules that define communication and how data is transmitted over a medium
 What is OSI model?
