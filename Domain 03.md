@@ -707,8 +707,8 @@ This model used security labels to grant access to objects
 #### Edge computing systems 
 #### Virtualized systems
 
+## Chapter 10: 
 
-- Chapter 10: 
 #### Design site and facility security controls, 
 #### Apply security principles to site and facility design
 
