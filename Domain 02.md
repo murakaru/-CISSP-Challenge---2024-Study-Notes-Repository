@@ -1,17 +1,25 @@
 # Domain 2: Asset Security 
 
-Chapter 5: Identify and classify information and assets, Establish information and asset handling requirements, Manage data lifecycle.
+- Chapter 5: Identify and classify information and assets, Establish information and asset handling requirements, Manage data lifecycle.
 
-Chapter 16: Provision resources securely. 
+- Chapter 16: Provision resources securely. 
 
 ### Identify and classify information and assets
-What is an asset? These are the elements that an organization aims to protect. There are multiple types of assets and hence its important to prioritize the assets. We prioritize the assets based on the threats 
 
-What is a threat? a threat is any circumstance or event that can negatively impact assets. 
+#### What are assets? 
+These are the elements that an organization aims to protect. There are multiple types of assets and hence its important to prioritize the assets. We prioritize the assets based on the threats 
 
-What are vulnerabilitiues? This is a weakness that can be exploited by a threat. 
+#### What is a threat? 
+A threat is any circumstance or event that can negatively impact assets. 
 
-Risk: Anything that can impact the confidentiality, integrity, or availability of an asset
+#### What is a vulnerabilities? 
+This is a weakness that can be exploited by a threat. 
+
+
+#### What is a Risk?
+Anything that can impact the confidentiality, integrity, or availability of an asset
+
+#### Formula to calculate Risk
 Likelihood x Impact = Risk
 
 ###### Common asset classifications
@@ -31,14 +39,14 @@ The most common classification scheme is: restricted, confidential, internal-onl
 ### Asset Classification
 
 It's important to identify and classify assets, such as systems, mobile devices etc.
-Classification: derived from compliance mandates, the process of recognizing organizational impacts if information suffers any security compromise (whether to confidentiality, integrity, availability, non-repudiation, authenticity, privacy, or safety)
 
+- Classification: derived from compliance mandates, the process of recognizing organizational impacts if information suffers any security compromise (whether to confidentiality, integrity, availability, non-repudiation, authenticity, privacy, or safety)
 Asset classifications should match data classification, i.e. if a computer is processing top secret data, the computer should be classified as a top secret asset
 
-Clearance: relates to access of certain classfication of data or equipment, and who has access to that level or classification
+- Clearance: relates to access of certain classfication of data or equipment, and who has access to that level or classification
 
-A formal access approval process should be used to change user access; the process should involve approval from the data/asset owner, and the user should be informed about rules and limits
-before a user is granted access they should be educated on working with that level of classification
+A formal access approval process should be used to change user access; the process should involve approval from the data/asset owner, and the user should be informed about rules and limits before a user is granted access they should be educated on working with that level of classification
+
 Classification levels can be used by businesses during acquisitions, ensuring only personnel who need to know are involved in the assessment or transition
 
 In general, classification labels help users use data and assets properly, for instance by restricting dissemination or use of assets by their classification
@@ -58,7 +66,6 @@ The data and asset handling key goal is to prevent data breaches, by using:
   
 * Data Location: keep dup copies of backups, on- and off-site
   
-
 ##### Data destruction: 
 
 destroy data no longer needed by the organization; policy should define acceptable destruction methods by type and classification (see NIST SP-800-88 for details)
@@ -70,7 +77,6 @@ destroy data no longer needed by the organization; policy should define acceptab
 
 ### Establish information and asset handling requirements
 
-Cloud security 
 There are three main categories of cloud-based services:
 
 * Software as a service (SaaS)
@@ -83,10 +89,8 @@ PaaS refers to back-end application development tools that clients can access on
 IaaS customers are given remote access to a range of back-end systems that are hosted by the cloud service provider. This includes data processing servers, storage, networking resources, and more. Resources are commonly licensed as needed, making it a cost-effective alternative to buying and maintaining on premises.
 
 Cloud-based services allow companies to connect with their customers, employees, and business partners over the internet. Some of the largest organizations in the world offer cloud-based services:
-
-Google Cloud Platform
-Microsoft Azure
-
+- Google Cloud Platform
+- Microsoft Azure
 
 ##### Cloud security challenges
 All service providers do their best to deliver secure products to their customers. Much of their success depends on preventing breaches and how well they can protect sensitive information. However, since data is stored in the cloud and accessed over the internet, several challenges arise:
@@ -101,11 +105,25 @@ All service providers do their best to deliver secure products to their customer
 
 #### Components of a sec plan: Policies, standards and Procedures. 
 
+- Policies: Policies are high-level, broad statements that reflect the organization’s general approach to information security. They outline the overall intent, goals, and guiding principles for managing security risks, and typically align with business objectives.
+Purpose: Policies provide direction and expectations for security management but do not go into specific details. They often serve as a foundation for the development of standards, guidelines, and procedures.
+Example: An organization may have a Security Policy that states "All company data must be protected against unauthorized access."
 
+- Standards: Standards are mandatory, detailed requirements derived from policies. They define specific technical or procedural criteria that must be met to comply with the security policies.
+  
+Purpose: Standards ensure uniformity and consistency across systems and processes, enabling an organization to implement its policies effectively. They typically cover technical specifications or frameworks that must be followed.
+
+Example: A password standard might specify that "Passwords must be at least 12 characters long and include a combination of upper and lowercase letters, numbers, and symbols."
+
+- Procedures: Procedures are step-by-step instructions that explain exactly how to carry out specific tasks or actions required to comply with policies and standards.
+- 
+Purpose: Procedures guide personnel through the specific actions needed to achieve consistent outcomes and ensure that security controls are implemented correctly. They are more operational in nature and are used by staff to perform security-related tasks.
+
+Example: A procedure for data backup might detail "how to configure automated backup systems," specifying the steps required for ensuring backups are securely stored and recoverable.
 
 ### Manage data lifecycle
 
-* Data ar rest: any data stored on media such as hard drives or external media 
+* Data at rest: any data stored on media such as hard drives or external media 
 
 * Data in use: data in memory and used by an application. The app should flush memory buffers to remove data after it is no longer needed
 
@@ -114,7 +132,6 @@ All service providers do their best to deliver secure products to their customer
 ## Chapter 16
 
 ### Provision resources securely
-
 
 The primary purpose of security operations practices is to safeguard assets such as information, systems, devices, facilities, and apps; these practices help to identify threats, vulnerabilities, and implement controls to reduce the risk to these asssets
 
@@ -139,19 +156,20 @@ note: patents in the US are valid for 20 years
 ##### Asset management
 
 Asset management refers to managing both tangible and intangible assets; this starts with inventories of assets, tracking the assets, and taking additional steps to protect them throughout their lifetime
-*Accountability: ensures that account management has assurance that only authorized users are accessing a system and using it properly
-*Hardware assets: IT resources such as computers, servers, routers, switches and peripherals
+* Accountability: ensures that account management has assurance that only authorized users are accessing a system and using it properly
+  
+* Hardware assets: IT resources such as computers, servers, routers, switches and peripherals
 use an automated configuration management system (CMS) to help with hardware asset management
 use barcodes, RFID tags to track hardware assets
-*Software assets: operating systems and applications
+
+* Software assets: operating systems and applications
 important to monitor license compliance to avoid legal issues
 
 ### Data Roles (i.e., owners, controllers, custodians, processors, users/subjects)
 
 * System owner: controls the computer storing the data; usually includes software and hardware configurations and support services (e.g. cloud implementation)
   
-* data owner is the person respsonible for classifying, categorizing, and permitting access to the data; the data owner is the person who is best familiar with the importance of the data to the business system owners are responsible for the systems that process the data system owner is responsible for system operation and maintenance, and associated updating/patching as well as related procurement activities
-per NIST SP 800-18, information system owner has the following responsibilities:
+* data owner is the person respsonible for classifying, categorizing, and permitting access to the data; the data owner is the person who is best familiar with the importance of the data to the business system owners are responsible for the systems that process the data system owner is responsible for system operation and maintenance, and associated updating/patching as well as related procurement activities per NIST SP 800-18, information system owner has the following responsibilities:
 
 ** develops the system security plan
 ** maintains the system security plan and ensures that the system is deployed/operated according to security requirements
