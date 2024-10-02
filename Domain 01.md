@@ -630,4 +630,10 @@ Hand written notes of chapter 19
 
 **Investigation Types** 
 
+1. Adminstrative Investigations: internal - Examine operational issues or the violations of an orgs policies. The goal is to resolve operational issues. Helps to conduct the RCA of an issue. 
+2. Criminal Investigations: Conducted by law enforcement. Investigates violation of a law and seeks prosecution in criminal court. This investigation must meet "beyond reasonable doubt" 
+3. Civil Investigations: Involves internal employees and outside consultants. They ise the weaker preponderence of evidence standard. 
+4. Regulatory: Conducted by govt agencies believing that an org has violated an administrative lae . Regulators conduct these investigations. 
+
+
 
