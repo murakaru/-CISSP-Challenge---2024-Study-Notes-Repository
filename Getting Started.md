@@ -17,5 +17,5 @@ So, this certification is not for everyone. Its recommended to have atleast 5 ye
 - CISSP all in one Exam guide, 8th Edition
 - CISSP for dummies
 - CISSP Practice Exams, 5th Edition
-- CISSP in 21 days
-- acloudguru CISSP video tutorial
+- Destination CISSP - Book and youtube
+
