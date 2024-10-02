@@ -95,7 +95,7 @@ Objective: No one control can protect against all threats
 
 ## Chapter 7: PKI and Cryptographic Applications
 
-asymmetric cryptosystems use pairs of public and private keys to facilitate secure communication without the overhead of complex key distribution systems.
+Asymmetric cryptosystems use pairs of public and private keys to facilitate secure communication without the overhead of complex key distribution systems.
 
 *Common Asymetric cyptosystems today8
 
@@ -217,29 +217,29 @@ Advantage: It is fast
 Disadvantage: MD5 protocol is subject to collisions
 
 *RipeMD*
-an alternative to the SHA family that is used in some applications, such as Bitcoin cryptocurrency implementations
+An alternative to the SHA family that is used in some applications, such as Bitcoin cryptocurrency implementations
 
 - RIPEMD produced a 128-bit digest and contained some structural flaws that rendered it insecure.
 - RIPEMD-128 replaced RIPEMD, also producing a 128-bit digest, but it is also no longer considered secure.
 - RIPEMD-160 is the replacement for RIPEMD-128 that remains secure today and is the most commonly used of the RIPEMD variants. It produces a 160-bit hash value.
  
 
-Comparison of Hash Algorithm Value Lengths
+*Comparison of Hash Algorithm Value Lengths*
 
-HAVAL - 128,160,192,224,256
-HMAC - Variable
-MD5 - 128
-SHA1 - 160
-SHA2,224/SHA3,224 - 224
-SHA2,256/SHA3,256 - 256
-SHA2,384/SHA3,384 - 384
-SHA2,512/SHA3,512 - 512
-RIPEMD128 - 128
-RIPEMD160 - 160
-RIPEMD256 - 256
-RIPEMD320 - 320
+- HAVAL - 128,160,192,224,256
+- HMAC - Variable
+- MD5 - 128
+- SHA1 - 160
+- SHA2,224/SHA3,224 - 224
+- SHA2,256/SHA3,256 - 256
+- SHA2,384/SHA3,384 - 384
+- SHA2,512/SHA3,512 - 512
+- RIPEMD128 - 128
+- RIPEMD160 - 160
+- RIPEMD256 - 256
+- RIPEMD320 - 320
 
-Digital Signatures 
+**Digital Signatures**
 
 What is a digital signature? How do we get it? 
 
@@ -253,14 +253,14 @@ Applications of Digital signatures
 Generating a digital signature 
 Digital signatures rely on Public key cryptography and hash algorithms 
 
-Steps. 
+**Steps**
 
-Sender side
+- Sender side
 Run the message through a hashing algorithm to generate a message digest 
 Run the message digest through an encryption algorithm (use senders private key) to generate a digital signature 
 Attach the digital signature to the message and send to recipient 
 
-Receiver side
+- Receiver side
 Run the digital signature through a decryption algorithm (use senders public key) 
 Run the message through a hashing algorithm ro generate a message digest. 
 The receiver compares the message digest received with the generated digest. If they match, integrity is maintained. If not,the message was altered in transit. 
@@ -268,7 +268,7 @@ The receiver compares the message digest received with the generated digest. If 
 How do we provide confidentiality with digital signatures? 
 Lets look at the same case above 
 
-Sender side
+- Sender side
 Run the message through a hashing algorithm to generate a message digest 
 Run the message digest through an encryption algorithm (use senders private key) to generate a digital signature 
 Attach the digital signature to the message 
@@ -284,7 +284,8 @@ Adding the few steps above ensures confidentiality as the entire message is encr
 Encrrpted using receivers public key and decryped using the receivers private key. 
 
 
-HMAC 
+**HMAC**
+
 This stands for Hashing Message Authentication Code 
 It implements partial digital signatures to ensure integrity during transmission 
 However, this does not provide non repudiation. 
@@ -298,7 +299,7 @@ When verifying the signature on a message received? Use the senders public key
 HMAC combines with other hashing algoriths such as MD5, SHA2, SHA3 using a shared secret key. 
 Where would one apply HMAC? Where symettric keys are used. It serves as a middleground between encrypted message digest algorithm and computationally expensive digital signatures based on PKI 
 
-Digital Signature Standard
+**Digital Signature Standard**
 This is a document that specifies federally approved digital signature algorithms. 
 This standard specifies approved encyption algorithms 
 1. DSA - Digital Signature Algorithm specifies in FIPs 186-4
@@ -310,16 +311,16 @@ This provides hybrid cryptography.
 It combines symmetric ans asymmetric encryption, hashing algorithms and digital signatures. 
 This enables communication between previous unknown parties. 
 
-Components of PKI 
+**Components of PKI** 
 1. Digital certificates
 2. Certificate Authorities
 
-Digital Certificates 
+**Digital Certificates**
 This is assurance that people we are communicating with are who they say they are. 
 A digital certificate os a verifies public key 
 They are governed under x.509 standard
 
-Contents of a digital signature
+**Contents of a digital signature**
 1. The version of x.509
 2. Serial number
 3. Signature Algorithm identifier (the technique used by CA to sign the contents of the certificate
@@ -331,7 +332,7 @@ Contents of a digital signature
 What does a wildcard mean? 
 It indicates that the certificate is good for subdomains as well. 
 
-Certificate Authorities 
+**Certificate Authorities** 
 The glue that binds PKI 
 It is a notarization service for Digital signatures 
 Examples of CAs: Symantec, AWS, digicert. 
@@ -347,7 +348,7 @@ The use of a series of internediate CAs. The browser checks the certificate chai
 Can you have an Internal CA? 
 Yes. Multiple organisations have their own implementation of CAs internally. These certs are self signed. Internal systems must be configured to trust these self signed certificates. 
 
-Cert Lifecycle 
+**Cert Lifecycle** 
 
 1. Create/enroll
 2. Validate
@@ -360,10 +361,10 @@ Creation
 4. You are now free to circulate the cert.
 
 Types of certificates 
-Domain velidation certificate 
-Extended validation 
+1. Domain validation certificate 
+2. Extended validation 
 
-Verification 
+**Verification**
 What do you check when you receive a digital certificate 
 1. CA digital signature
 2. Validity period
@@ -373,7 +374,7 @@ What do you check when you receive a digital certificate
 What is certificate pinning? 
 This instructs the browsers to attacj a cert to a subject for an extended period of time. When sites use cert pinning, the browser associates that site with their public key which allows users or admins to notice anf intervene if certificate unexpetedly changes 
 
-Revocation
+**Revocation**
 What are the reasons for revocation?
 1.The cert was compormised 
 2.The cert was erroneously issued
@@ -387,7 +388,7 @@ Techniques to verify authenticity of certs
 2. OCSP
 3. Certificate Stapling
 
-Certificate Formats 
+**Certificate Formats** 
 The formats can be either in binary or text format 
 
 1. Distingushed Encoding Rule (DER)- Binary - der,.crt,.cer
@@ -434,19 +435,19 @@ IPSEC - It relies on AH and ESP. AH ensures integrity and nonrepudiation. ESP pr
 
 ### Cryptographic Attacks 
 
-Analytic attack 
-Implementation attack 
-Statistical Attack 
-Brute Force attack 
-Fault Injection attack 
-Side-Channel Attack 
-Timing attack 
-Frequency analysis and ciphertext-Only attack 
-Known Plaintext attack 
-Chosen Plaintext 
-Chosen Ciphertext 
-Meet in the middle 
-Man in the middle
+- Analytic attack 
+- Implementation attack 
+- Statistical Attack 
+- Brute Force attack 
+- Fault Injection attack 
+- Side-Channel Attack 
+- Timing attack 
+- Frequency analysis and ciphertext-Only attack 
+- Known Plaintext attack 
+- Chosen Plaintext 
+- Chosen Ciphertext 
+- Meet in the middle 
+- Man in the middle
 
 
 ### Chapter 8: 
@@ -459,12 +460,11 @@ Object? This is the resource being accessed. A file, printer e.t.c
 
 Relationship between object and subject: Writing, reading, deleting, printing, copying , moving, backing up e.t c
 
-Transitive Trust: If A trusts B , and B trusts C, then A can trsut C. 
-Transitive trust is a serious security concern as it might cause bypassing of controls. 
+- Transitive Trust: If A trusts B , and B trusts C, then A can trsut C. Transitive trust is a serious security concern as it might cause bypassing of controls. 
 
-Closed and open systems 
-Closed: Same manufacturere, deigned to work in  a silo
-Opne: Based upon agreed upon standards, can be integrated, APIs 
+- Closed and open systems 
+* Closed: Same manufacturere, deigned to work in  a silo
+* Open: Based upon agreed upon standards, can be integrated, APIs 
 
 ### Secure Defaults 
 "The tyranny of the defaults"
@@ -494,7 +494,7 @@ Fail closed and fail secure aims to protect assets during system failure.
 
 What is KISS? A recommendation to build systems that are less complicated.
 
-Concepts of KISS
+**Concepts of KISS**
 - DRY (Do Repeat Yourself) - Imperative for change management. Makes it less difficult to change. 
 - Computing minimalism - code should use the least necesary hardware and software.
 - Rule of Least power - use the least powerful programming language.
@@ -544,7 +544,8 @@ It is no longer sufficient in the meodern world due to the changing threat lands
     
 3. Isolation - Depends on confinement and bounds.
    This ensures that any behaviour will affect the memory and resources associated with that process.
-   This protects the OS environment and kernel. Prevents an application from accessing the memory and resources of other applications.
+   This protects the OS environment and kernel. Prevents an application from accessing the memory and resources of other 
+   applications.
    
 4. Access Controls - Only allows authorised subjects to access objects.
    Options for Access conteols - discretionary, role-base and mandatory.
@@ -557,12 +558,13 @@ It is no longer sufficient in the meodern world due to the changing threat lands
 
 - Trusted Computing base
   Combination of H/W, S/W and controls that work together. It is the only portion of the system that can be trusted to adhere and enforce security policies.
-    Sec Perimeter: Logical boundary separating the TCB from the rest of the system to ensure that there is no inseure comm between TCB and other elements of the computer system.Trusted paths are used to communicate between TCB and other parts of the system.
-    Ref Monitors - This sits between every subject and object. Collection of components in the TCB that work together to impelement the ref monitor is the sec kernel. The sec kernel will mediate all the requests that match the access rules for the system.
+    - Sec Perimeter: Logical boundary separating the TCB from the rest of the system to ensure that there is no inseure comm between TCB and other elements of the computer system.Trusted paths are used to communicate between TCB and other parts of the system.
+    - Ref Monitors: This sits between every subject and object. Collection of components in the TCB that work together to impelement the ref monitor is the sec kernel. The sec kernel will mediate all the requests that match the access rules for the system.
   
 - State Machine Model
   This describes a system that is always secure no matter the state its in.
-  What is a state? This is a snapshot of the system at a specific point in time. When there is a transition(moment an input is translated into an output) then the state changes. A secure machine will always boot into a secure state
+  
+    What is a state? This is a snapshot of the system at a specific point in time. When there is a transition(moment an input is x aswtranslated into an output) then the state changes. A secure machine will always boot into a secure state
   
 - Information Flow Model
   This focuses on information  flow.
