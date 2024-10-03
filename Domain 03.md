@@ -697,33 +697,310 @@ This model used security labels to grant access to objects
 
 
 #### Shared Responsibility
+
+Shared responsibility: the security design principle that indicates that organizations do not operate in isolation
+* Everyone in an organization has some level of security responsibility
+* The job of the CISO and security team is to establish & maintain security
+* The job of regular employees to perform their tasks within the confines of security
+* The job of the auditor is to monitor the environment for violations
+  
+Because we participate in shared responsibility we must research, implement, and manage engineering processes using secure design principles
+When working with third parties, especially with cloud providers, each entity needs to understand their portion of the shared responsibility of performing work operations and maintaining security; this is often referenced as the cloud shared responsibility model
+
 #### Client-based Systems 
+
+Client-based systems: client computers are the most attacked entry point
+Compromised client computers can be used to launch other attacks
+Productivity software and browsers are constant targets
+Even patched client computers are at risk due to phishing and social engineering vectors
+Mitigation: run a full suite of security software, including anti-virus/malware, anti-spyware, and host-based firewall
+
+
 #### Server-based Systems 
+
+*Data Flow Control:* movement of data between processes, between devices, across a network, or over a communications channel
+
+Management of data flow seeks to minimize latency/delays, keep traffic confidential (i.e. using encryption), not overload traffic (i.e. load balancer), and can be provided by network devices/applications and services
+
+While attackers may initially target client computers, servers are often the goal
+Mitigation: regular patching, deploying hardened server OS images for builds, and use host-based firewalls
+
 #### Industrial Control Systems (ICS) 
+
+Industrial control systems (ICS): a form of computer-management device that controls industrial processes and machines, also known as operational technology (OT)
+
+Supervisory control and data acquisition (SCADA): systems used to control physical devices like those in an electrical power plant or factory; SCADA systems are well suited for distributed environments, such as those spanning continents
+some SCADA systems still rely on legacy or proprietary communications, putting them at risk, especially as attackers gain knowledge of such systems and their vulnerabilities
+
+SCADA risk mitigations:
+* isolate networks
+* limit access physically and logically
+* restrict code to only essential apps
+* log all activity
+
+  
 #### Distributed systems 
+
+- Distributed computing environment (DCE): a collection of individual systems that work together to support a resource or provide a service
+DCEs are designed to support communication and coordination among their members in order to achieve a common function, goal, or operation
+
+Most DCEs have duplicate or concurrent components, are asynchronous, and allow for fail-soft or independent failure of components
+DCE is AKA concurrent computing, parallel computing, and distributed computing
+
+DCE solutions are implemented as client-server, three-tier, multi-tier, and peer-to-peer
+
+*Securing distributed systems*
+
+In distributed systems, integrity is sometimes a concern because data and software are spread across various systems, often in different locations
+Client/server model network is AKA a distributed system or distributed architecture
+security must be addressed everywhere instead of at a single centralized host
+processing and storage are distributed on multiple clients and servers, and all must be secured
+network links must be secured and protected
+
 #### Internet of Things (IoT) 
+
+Internet of things (IoT): a class of smart devices that are internet-connected in order to provide automation, remote control, or AI processing to appliances or devices
+An IoT device is almost always separate/distinct hardware used on its own or in conjunction with an existing system
+IoT security concerns often relate to access and encryption
+IoT is often not designed with security as a core concept, resulting in security breaches; once an attacker has remote access to the device they may be able to pivot
+Securing IoT:
+deploy a distinct network for IoT equipment, kept separate and isolated (known as three dumb routers)
+- keep systems patched
+- limit physical and logical access
+- monitor activity
+- implement firewalls and filtering
+- never assume IoT defaults are good enough, evaluate settings and config options, and make changes to optimize security while supporting business function
+- disable remote management and enable secure communication only (such as over HTTPS)
+- review IoT vendor to understand their history with reported vulnerabilities, response time to vulnerabilities and their overall approach to security
+- not all IoT devices are suitable for enterprise networks
 #### Microservices, Containerization
+
+##### Service-oriented Architecture (SOA
+constructs new apps or functions out of existing but separate and distinct software services, and the resulting app is often new; therefore its security issues are unknown, untested, and unprotected; a derivative os SOA is microservices
+##### Microservices: 
+A microservice is simply one element, feature, capability, business logic, or function of a web app that can be called upon or used by other web apps
+Microservices are usually small and focused on a single operation, engineered with few dependencies, and based on fast, short-term development cycles (similar to Agile)
+Securing microservices:
+- use HTTPS only
+- encrypt everything possible and use routine scanning
+- closely aligned with microservices is the concept of shifting left, or addressing security earlier in the SDLC; also integrating it into the CI/CD pipeline
+- consider the software supplychain or dependencies of libries used, when addressing updates and patching
+
 #### Serverless 
+Serverless architecture (AKA function as a service (FaaS)): a cloud computing concept where code is managed by the customer and the platform (i.e. supporting hardware and software) or servers are managed by the CSP
+Applications developed on serverless architecture are similar to microservices, and each function is created to operate independently and automonomously
+A serverless model, as in other CSP models, is a shared security model,and your org and the CSP share security responsibility
+
 #### Embedded systems 
+
+Embedded systems: any form of computing component added to an existing mechanical or electrical system for the purpose of providing automation, remote control, and/or monitoring; usually including a limited set of specific functions
+Embedded systems can be a security risk because they are generally static, with admins having no way to update or address security vulns (or vendors are slow to patch)
+Embedded systems focus on minimizing cost and extraneous features
+Embedded systems are often in control of/associated with physical systems, and can have real-world impact
+Securing embedded systems:
+ -  embedded systems should be isolated from the internet, and from a private production network to minimize exposure to remote exploitation, remote control, and malware
+ -  use secure boot feature and physically protecting the hardware
+
 #### High-Performance Computing (HPC) systems 
+
+High-performance computing (HPC) systems: platforms designed to perform complex calculations/data manipulation at extremely high speeds (e.g. super computers or MPP (Massively Parallel Processing)); often used by large orgs, universities, or gov agencies
+An HPC solution is composed of three main elements:
+- compute resources
+- network capabilities
+- storage capacity
+HPCs often implement real-time OS (RTOS)
+HPC systems are often rented, leased or shared, which can limit the effectiveness of firewalls and invalidate air gap solutions
+Securing HPC systems:
+deploy head nodes and route all outside traffic through them, isolating parts of a system
+"fingerprint" HPC systems to understand use, and detect anomalous behavior
+
 #### Edge computing systems 
+
+Edge computing: philosophy of network design where data and compute resources are located as close as possible, at or near the network edge, to optimize bandwidth use while minimizing latency
+Securing edge computing:
+this technology creates additional network edges that result in increased levels of complexity
+visibility, control, and correlation requires a Zero Trust access-based approach to address security on the LAN edge, WAN edge and cloud edge, as well as network management
+edge-based computing devices,especially IoT devices, are often produced with limited security forethought
+devices on your network, no matter where they reside, need to be configured, managed, and patched using a consistent policy and enforcement strategy
+use intelligence from side-channel signals that can pick up hardware trojans and malicious firmware
+attend to physical security
+deploy IDS on the network side to monitor for malicious traffic
+in many scenarios, you are an edge customer, and likely will need to rely on a vendor for some of the security and vulnerability remediation
+
 #### Virtualized systems
+Virtualized systems: used to host one or more OSs within the memory of a single host computer, or to run apps not compatible with the host OS
+Securing virtualized systems:
+the primary component in virtualization is a hypervisor which manages the VMs, virtual data storage, virtual network components
+the hypervisor represents an additional attack surface
+in virtualized environments, you need to protect both the VMs and the physical infrastructure/hypervisor
+hypervisor admin accounts/credentials and service accounts are targets because they often provide access to VMs and their data; these accounts should be protected
+virtual hosts should be hardened; to protect the host, avoid using it for anything other than hosting virtualized elements
+virtualized systems should be security tested via vuln assessment and penetration testing
+virtualization doesn't lessen the security management requirements of an OS, patch management is still required
+be aware of VM Sprawl and Shadow IT
+VM escape: occurs when software within a guest OS is able to breach the isolation protection provided by the hypervisor
+VM escape minimizaton:
+keep highly sensitive systems and data on separate physical machines
+keep all hypervisor software current with vendor-released patches
+monitor attack, exposure and abuse indexes for new threats to virtual machines (which might be better protected); often, virtualization administrators have access to all virtuals
+
 
 ## Chapter 10: 
 
 #### Design site and facility security controls, 
-#### Apply security principles to site and facility design
+
+3.9.1 Wiring closets/intermediate distribution facilities
+Wiring closets/intermediate distribution facilities (IDF): A wiring closet or IDF is typically the smallest room that holds IT hardware
+wiring closet is AKA premises wire distribution room, main distribution frame (MDF), intermediate distribution frame (IDF), and telecommunications room, and it is referred to as an IDF in (ISC)^2 CISSP objective 3.9.1
+usually includes telephony and network devices, alarm systems, circuit breaker panels, punch-down blocks, WAPs, video/security
+may include a small number of servers
+access to the wiring closest/IDF should be restricted to authorized personnel responsible for managing the IT hardware
+use door access control (i.e. electronic badge system or electronic combination lock)
+from a layout perspective, wiring closets should be accessible only in private areas of the building interiors; people must pass through a visitor center and a controlled doorway prior to be able to enter a wiring closet
+3.9.2 Server rooms/data centers
+Server rooms/data centers: server rooms, data centers, communication rooms, server vaults, and IT closets are enclosed, restricted, and protected rooms where mission critical servers and networks are housed
+a server room is a bigger version of a wiring closet, much smaller than a data center
+a server room typically houses network equipment, backup infrastructure and servers (more archaic versions include telephony equipment)
+server rooms should be designed to support optimal operation of IT infrastructure and to block unauthorirzed human access or intervention
+server rooms should be located at the core of the building (avoid ground floor, top floor, or in the basement)
+server rooms should have a single entrance (and an emergency exit)
+server room should block unauthorized access, and entries and exits should be logged
+datacenters are usually more protected than server rooms, and can include guards and mantraps
+datacenters can be single-tenant or multitenant
+3.9.3 Media storage facilities
+Media storage facilities:often store backup tapes and other media, and should be protected just like a server room
+depending on requirements a cabinet or safe could suffice
+new blank media, and media that is reused (e.g. thumb drives, flash memory cards, portable hard drives) should be protected against theft and data remnant recovery
+other recommendations:
+employ a media librarian or custodian
+use check-in/check-out process for media tracking
+run a secure drive sanitization or zeroization when media is returned
+note: a safe is a movable secured container that's not integrated into a building's construction; a vault is a permanent safe integrated into construction
+3.9.4 Evidence storage
+Evidence storage: as cybercrime events continue to increase, it is import to retain logs, audit trails, and other records of digital events; the evidence storage exists to preserve chain of custody
+a key part of incident response is to gather evidence to perform root cause analysis
+an evidence storage room should be protected like a server room or media storage facility
+an evidence storage room can contain physical evidence (such as a smartphone) or digital evidence (such as a database)
+3.9.5 Restricted and work area security
+Restricted and work area security: covers the design and configuration of internal security, including work and visitor areas
+includes areas that contain assets of higher value/importance which should have more restricted access
+restricted work areas are used for sensitive operations, such as network/security ops
+protection should be similar to a server room, but video surveillance is typically limited to entry and exit points
+3.9.6 Utilities and heating, ventilation, and air conditioning (HVAC)
+Power management in ascending order: surge protectors, power/power-line conditioner, uninterruptible power supply (UPS), generators
+Types of UPS:
+double conversion: functions by taking power from the wall outlet, storing it in a battery, pulling power out of the battery and feeding that power to the device/devices
+line-interactive: has a surge protector, battery charger/inverter and voltage regulator positioned between the grid power source and the equipment (battery is not in line under normal conditions)
+Commercial power problem types:
+fault: momentary loss of power
+blackout: complete loss of power
+sag: momentary low voltage
+brownout: prolonged low voltage
+spike: momentary high voltage
+surge: prolonged high voltage
+inrush: initial surge of power associated with connecting to a power source
+Think through types of physical controls for HVAC:
+restrict duct space continuity to controlled areas
+use separate and redundant HVAC systems for computer equipment
+Datacenter:
+should be on different power circuits from occupied areas
+common to use a backup generator
+3.9.7 Environmental issues
+Environmental monitoring is the process of measuring and evaluating the quality of the environment within a given structure (e.g. temperature, humidity, dust, smoke), using things like chemical, biological, radiological, and microbiological detectors
+Halon starves a fire of oxygen by disrupting the chemical reaction of combustion, but degrades into toxic gases at 900 degrees Fahrenheit, and is not environmentally friendly
+If water-based sprinklers are used for fire suppression, damage to electronic equipment is likely; automate the shutoff of electricity prior to sprinkler trigger
+Other environmental issues include earthquakes, power outages, tornados and wind
+Secondary facilities should be located far enough away from the primary to ensure they won't be damaged by the same event
+3.9.8 Fire prevention, detection, and suppression
+Protecting personnel from harm should always be the most important goal of any security or protection system!
+In addition to protecting people, fire detection and suppression is designed to keep asset damage caused by fire, smoke, heat, and suppression materials to a minimum
+Fire triangle: three triangle corners represent fuel, heat, and oxygen; the center of the triangle represents the chemical reaction among these three elements
+if you can remove any one of the four items from the fire triangle, the fire can be extinguished
+Fire suppression mediums:
+water suppresses temperature
+soda acid and other dry powders suppress the fuel supply
+carbon dioxide (CO2) suppresses the oxygen supply
+halon substitutes and other nonflammable gases interfere with the chemistry of combustion and/or suppress the oxygen supply
+Fire stages:
+Stage 1: incipient stage: at this stage, there is only air ionization and no smoke
+Stage 2: smoke stage: smoke is visible from the point of ignition
+Stage 3: flame stage: this is when a flame can be seen with the naked eye
+Stage 4: heat stage: at stage 4, there is an intense heat buildup and everything in the area burns
+Fire extinguisher classes:
+Class A: common combustibles
+Class B: liquids
+Class C: electrical
+Class D: metal
+Class K: cooking material (oil/grease)
+Four main types of suppression:
+wet pipe system: (AKA closed head system): is always filled with water; water discharges immediately when suppression is triggered
+dry pipe system: contains compressed inert gas
+preaction system: a variation of the dry pipe system that uses a two-stage detection and release mechanism
+deluge system: uses larger pipes and delivers larger volume of water
+Note: Most sprinkler heads feature a glass bulb filled with a glycerin-based liquid; this liquid expands when it comes in contact with air heated to between 135 and 165 degrees; when the liquid expands, it shatters its glass confines and the sprinkler head activates
+3.9.9 Power (e.g., redundant, backup)
+Consider designing power to provide for high availability
+Most power systems have to be tested at regular intervals
+As part of the design, mandate redundant power systems to accommodate testing, upgrades and other maintenance
+Additionally, test failover to a redundant power system and ensure it is fully functional
+The International Electrical Testing Association (NETA) has developed standards around testing power systems
+Battery backup/fail-over power (including UPS/generators):
+this is a system that collects power into a battery but can switch over to pulling power from the battery when the power grid fails
+generally, this type of system was implemented to supply power to an entire building rather than just one or a few devices
+
 
 ## Chapter 16: 
 
-#### Least Privilege, 
-#### Separation of duties (SoD), 
-#### Cloud-based systems (e.g., Software as a Service (SaaS), 
+#### Least Privilege 
+
+Least privilege: states that subjects are granted only the privileges necessary to perform assigned work tasks and no more; this concept extends to data and systems
+Limiting and controlling privileges based on this concept protects confidentiality and data integrity
+
+#### Separation of duties (SoD) 
+Separation of duties (SoD): separation of duties (SoD) and responsibilities ensures that no single person has total control over a critical function or system; SoD is a process to minimize opportunities for misuse of data or environment damage
+e.g. one person sells tickets, another collects tickets and restricts access to ticket holders in a movie theater
+
+#### Cloud-based systems (e.g., Software as a Service (SaaS) 
+Cloud-based systems: on-demand access to computing resources available from almost anywhere
+Cloud's primary challenge: resources are outside the org’s direct control, making it more difficult to manage risk
+Orgs should formally define requirements to store and process data stored in the cloud
+Focus your efforts on areas that you can control, such as the network entry and exit points (i.e. firewalls and similar security solutions)
+All sensitive data should be encrypted, both for network communication and data-at-rest
+Use centralized identity access and management system, with multifactor authentication
+Customers shouldn’t use encryption controlled by the vendor, eliminating risks to vendor-based insider threats, and supporting destruction using
+Cryptographic erase: methods that permanently remove the cryptographic keys
+Capture diagnostic and security data from cloud-based systems and store in your SIEM system
+Ensure cloud configuration matches or exceeds your on-premise security requirements
+Understand the cloud vendor's security strategy
+Cloud shared responsibility by model:
+Software as a Service (SaaS):
+the vendor is responsible for all maintenance of the SaaS services
+
+
 #### Infrastructure as a Service (IaaS), 
+
+Infrastructure as a Service (IaaS):
+IaaS models provide basic computing resources to customers
+customers install OSs and apps and perform required maintenance
+the vendor maintains cloud-based infra, ensuring that customers have access to leased systems
+
 #### Platform as a Service (PaaS))
+
+Platform as a Service (PaaS):
+customers deploy apps that they’ve created or acquired, manage their apps, and modify config settings on the host
+the vendor is responsible for maintenance of the host and the underlying cloud infrastructure
+Infrastructure as a Service (IaaS):
 
 ## Chapter 20: 
 #### Database systems
 
-
+Databases often store a company's most sensitive data (e.g. proprietary, CC info, PHI, and PII)
+Database general ACID properties (Atomicity, Consistency, Isolation and Durability):
+Atomicity: transactions are all-or-nothing; a transaction must be an atomic unit of work, i.e., all of its data modifications are performed, or none are performed
+Consistency: transactions must leave the database in a consistent state
+Isolation: transactions are processed independently
+Durability: once a transaction is committed, it is permanently recorded
+Attackers may use inference or aggregation to obtain confidential information
+Aggregation attack: process where SQL provides a number of functions that combine records from one or more tables to produce potentially useful info
+Inference attack: involves combining several pieces of nonsensitive info to gain access to that which should be classified at a higher level; inference makes use of the human mind’s deductive capacity rather than the raw mathematical ability of database platforms
 
